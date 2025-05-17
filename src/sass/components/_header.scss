@@ -1,0 +1,119 @@
+.header {
+  height: 96px;
+  padding: 24px 0;
+
+  &__container {
+    @include flexbox($justify: space-between);
+  }
+
+  &__logo {
+    @include flexbox;
+    width: 220px;
+    height: 60px;
+    border-radius: 9px;
+    fill: $text-color;
+    transition: background, fill, $st-animation;
+
+    &:hover {
+      background: $highlight-color;
+      fill: $bg-color;
+    }
+
+    &:hover &--circle {
+      background-color: $bg-color;
+    }
+
+    &:hover &--icon {
+      fill: $highlight-color;
+    }
+
+    &--circle {
+      width: 32px;
+      height: 32px;
+      background-color: $highlight-color;
+      border-radius: 50%;
+      transition: background $st-animation;
+      @include flexbox;
+    }
+
+    &--icon {
+      width: 20px;
+      height: 20px;
+      transition: fill $st-animation;
+      fill: $bg-color;
+    }
+
+    &--text {
+      width: 155.026px;
+      height: 20.616px;
+    }
+  }
+
+  &__nav {
+    @include flexbox;
+    gap: 24px;
+  }
+
+  &__link {
+    padding: 12px 28px;
+    background-color: $highlight-color;
+    border-radius: 30px;
+    width: 104px;
+    transition: background $st-animation;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  &__cart {
+    @include flexbox;
+    gap: 10px;
+    height: 48px;
+    padding: 0 8px;
+border-radius: 30px;
+    fill: $bg-color;
+    transition: background, fill, $st-animation;
+      color: $text-color;
+
+     &:hover {
+      background: $hover-color;
+      fill: $hover-color;
+      color: $bg-color;
+    }
+
+    &:hover &--circle {
+      background-color: $bg-color;
+    }
+
+    &--circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 30px;
+      background-color: $highlight-color;
+      @include flexbox;
+        transition: background $st-animation;
+    }
+
+    &--icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    &--link {
+          font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 133.333%;
+      text-transform: uppercase;
+        transition: color $st-animation;
+    }
+  }
+
+  &__home {
+    color: $bg-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 133.333%;
+  }
+}
