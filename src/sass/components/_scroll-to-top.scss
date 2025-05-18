@@ -1,0 +1,25 @@
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+  height: 90px;
+  background-color: $highlight-color;
+  border-radius: 50%;
+  stroke: $bg-color;
+  @include flexbox;
+    transition: background,  box-shadow, $st-animation;
+
+  &:hover {
+    background-color: $bg-color;
+    stroke: $highlight-color;
+    box-shadow: 0 0 25px 10px rgba($highlight-color, 0.5);
+  }
+
+  &__icon {
+    fill: transparent;
+    rotate: 180deg;
+    width: 55px;
+    transition: stroke $st-animation;
+  }
+}
