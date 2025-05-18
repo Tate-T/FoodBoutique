@@ -47,18 +47,18 @@
     height: 100px;
     border-radius: 50%;
     background-color: #fdc152;
-    cursor: pointer;
+    cursor: default;
     @include flexbox;
 
     &--text {
       width: 90px;
       height: 90px;
       animation: spin 10s linear infinite;
-     animation-play-state: paused;
-    }
+        animation-play-state: running;
 
-    &--rotating {
-     animation-play-state:running;
+      &:hover {
+      animation-play-state: paused;
+      }
     }
   }
 
