@@ -2,24 +2,36 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   background-color: $highlight-color;
   border-radius: 50%;
-  stroke: $bg-color;
   @include flexbox;
+  gap: 20px;
     transition: background,  box-shadow, $st-animation;
 
   &:hover {
     background-color: $bg-color;
-    stroke: $highlight-color;
     box-shadow: 0 0 25px 10px rgba($highlight-color, 0.5);
   }
 
-  &__icon {
-    fill: transparent;
-    rotate: 180deg;
-    width: 55px;
-    transition: stroke $st-animation;
+  &:hover &__arrow {
+    background-color: $highlight-color;
+  }
+
+  &__arrow {
+    width: 10px;
+    height: 50px;
+    background-color: $bg-color;
+    border-radius: 6px;
+    transition: background $st-animation;
+  }
+
+  &__arrow:first-child {
+    transform: rotate(45deg);
+  }
+
+  &__arrow:last-child {
+    transform: rotate(-45deg);
   }
 }
