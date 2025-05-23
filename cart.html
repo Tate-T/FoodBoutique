@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link href=https://fonts.cdnfonts.com/css/pp-neue-montreal rel=stylesheet><title>Cart</title><link rel=stylesheet href=cart.9f132c36.css><body>
+<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link href=https://fonts.cdnfonts.com/css/pp-neue-montreal rel=stylesheet><title>Cart</title><link rel=stylesheet href=cart.cbd3335b.css><body>
     <header class=header>
   <div class="container header__container">
     <a href=index.html class=header__logo>
@@ -22,8 +22,42 @@
 </header>
 
     <section class=basket>
-    <h1>basket</h1>
+  <div class=container>
+    <div class=basket__cart>
+      <div class=basket__cart--circle>
+        <svg xmlns:xmlns=http://www.w3.org/2000/svg class=basket__cart--icon viewBox="0 0 32 32"><path d="M4.8 1.6a1.6 1.6 0 0 0 0 3.2h1.952l.488 1.955.016.067 2.173 8.688L8 16.937c-2.016 2.016-.589 5.462 2.262 5.462h13.737a1.6 1.6 0 0 0 0-3.2H10.261l1.6-1.6h10.537a1.6 1.6 0 0 0 1.431-.885l4.8-9.6c.122-.244.18-.515.167-.787s-.094-.537-.237-.769a1.6 1.6 0 0 0-1.36-.759H10.047L9.551 2.81a1.6 1.6 0 0 0-1.552-1.212h-3.2Zm20.8 24.8A2.4 2.4 0 1 1 20.801 26.40035343414578 2.4 2.4 0 0 1 25.6 26.4m-15.2 2.4a2.401 2.401 0 1 0-.001-4.802A2.401 2.401 0 0 0 10.4 28.8"/></svg>
+      </div>
+      <h3 class=basket__title>Cart (3)</h3>
+    </div>
+    <div class=basket__wraper>
+      <div class=basket__products>
+        <button class=basket__btn type=button>
+          Delete all
+          <svg xmlns:xmlns=http://www.w3.org/2000/svg class=basket__icon viewBox="0 0 32 32"><path d="M25 9.093 22.907 7 16 13.907 9.093 7 7 9.093 13.907 16 7 22.907 9.093 25 16 18.093 22.907 25 25 22.907 18.093 16Z"/></svg>
+        </button>
+        <ul class=basket__list></ul>
+      </div>
+      <div class=basket__order>
+        <h5 class=basket__subtitle>Your Order</h5>
+        <div class=basket__total>
+          <p class=basket__text>Total</p>
+          <div class=basket__sum>
+            <p class=basket__sum--text>Sum:</p>
+            <p class=basket__sum--number>$12,94</p>
+          </div>
+        </div>
+        <form class=basket__form>
+          <p class=basket__input--text>Address:</p>
+          <p class=basket__input--text>Phone:</p>
+          <input class=basket__input placeholder="Enter your address">
+          <input type=tel class=basket__input placeholder="Enter your phone number">
+          <button class=basket__submit>Checkout</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
+
     <div>
     <h1>Basket modal</h1>
 </div>
@@ -38,5 +72,7 @@
   <div class=scrollToTop__arrow></div>
 </a>
 
+
+    <script type=module src=FoodBoutique.ba6a8a2c.js></script>
 
 
