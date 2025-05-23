@@ -1,0 +1,195 @@
+.basket {
+  padding-top: 57px;
+  padding-bottom: 100px;
+
+  &__cart {
+    @include flexbox($justify: none);
+    gap: 14px;
+
+    &--circle {
+      width: 42px;
+      height: 42px;
+      background-color: $highlight-color;
+      border-radius: 50%;
+      fill: $bg-color;
+      @include flexbox;
+    }
+
+    &--icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__title {
+    color: $text-color;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    @include flexbox;
+    gap: 8px;
+    color: $text-color;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    cursor: pointer;
+    background-color: $bg-color;
+    border-radius: 7px;
+    transition: background-color, color, $st-animation;
+    fill: $text-color;
+    margin-right: 49px;
+    margin-left: auto;
+
+    &:hover {
+      background-color: $highlight-color;
+      color: $bg-color;
+      fill: $bg-color;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__wraper {
+    @include flexbox($align: none, $justify: space-between);
+  }
+
+  &__products {
+    padding-top: 16px;
+  }
+
+  &__list {
+    background-color: red;
+    margin-top: 46px;
+    width: 549px;
+    height: 520px;
+  }
+
+  &__order {
+    @include flexbox($align: none);
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__subtitle {
+    color: $text-color;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  &__total {
+    @include flexbox($align: none, $justify: space-between);
+    padding: 14px 28px;
+    width: 590px;
+    height: 60px;
+    border-radius: 8px;
+    background: rgba(109, 132, 52, 0.05);
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  &__sum {
+    @include flexbox($align: end);
+    gap: 8px;
+
+    &--text {
+      color: rgba(1, 1, 1, 0.2);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 116.667%;
+    }
+
+    &--number {
+      color: $text-color;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+    }
+  }
+
+  &__form {
+    position: relative;
+    @include flexbox();
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input {
+    display: flex;
+    width: 590px;
+    padding: 15px 0 15px 91px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 30px;
+    border: 1px solid rgba(1, 1, 1, 0.3);
+    background-color: $bg-color;
+
+    &:nth-child(4) {
+        padding-left: 78px;
+    }
+
+    &::placeholder {
+      color: $text-color;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 133.333%;
+    }
+
+    &--text {
+      color: rgba(1, 1, 1, 0.5);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 133.333%;
+      position: absolute;
+      top: 14px;
+      left: 20px;
+    }
+
+     &--text:nth-child(2) {
+      top: 84px;
+    }
+  }
+
+  &__submit {
+    color: $bg-color;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    width: 590px;
+    padding: 15px 65px;
+    gap: 10px;
+    border-radius: 30px;
+    background-color: $highlight-color;
+    cursor: pointer;
+    transition: background-color, color, box-shadow, $st-animation;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $highlight-color;
+      box-shadow: 0 0 25px 10px rgba($highlight-color, 0.5);
+    }
+  }
+}
