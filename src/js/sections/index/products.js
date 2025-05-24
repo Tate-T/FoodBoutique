@@ -9,7 +9,7 @@ const getFilteredProducts = async (keyword, category, id , sort) => {
 };
  
 
-let keyword = "";
+let keyword = ""; 
 let category = "";
 let sort = "";
 
