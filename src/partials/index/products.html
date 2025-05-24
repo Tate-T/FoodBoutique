@@ -1,86 +1,257 @@
-<section class="filters-products">
+<section class="products">
   <div class="container">
-    <!-- Filters -->
-    <h2 class="filters__title">Filters:</h2>
-    <div class="filters__body">
-      <form id="filters-form" class="filters__form">
-        <label class="filters__label">
-          <input
-            placeholder="Search for anything"
-            type="text"
-            class="filters__input"
-            id="filters-input"
-          />
-        </label>
-        <button class="filters__sub" type="submit">
-      <svg
-        class="hero__icon"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M22.667 10.667c-12 2.667-14.8 10.893-17.573 17.787l2.52 0.88 1.267-3.067c0.64 0.227 1.307 0.4 1.787 0.4 14.667 0 18.667-22.667 18.667-22.667-1.333 2.667-10.667 3-17.333 4.333s-9.333 7-9.333 9.667c0 2.667 2.333 5 2.333 5 4.333-12.333 17.667-12.333 17.667-12.333z"
-        ></path>
-      </svg>
-        </button>
-      </form>
-
-      <div class="filters__categories">
-        <button id="filters-categories" class="filters__btn" type="button">
-          <p id="filters-categories-text">Categories</p>
-      <svg
-        class="hero__icon"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M22.667 10.667c-12 2.667-14.8 10.893-17.573 17.787l2.52 0.88 1.267-3.067c0.64 0.227 1.307 0.4 1.787 0.4 14.667 0 18.667-22.667 18.667-22.667-1.333 2.667-10.667 3-17.333 4.333s-9.333 7-9.333 9.667c0 2.667 2.333 5 2.333 5 4.333-12.333 17.667-12.333 17.667-12.333z"
-        ></path>
-      </svg>
-        </button>
-        <ul class="filters__list is-hidden" id="filters-categories-list">
-          <li class="filters__item" id="Beverages">Beverages</li>
-          <li class="filters__item" id="Breads_&_Bakery">Breads / Bakery</li>
-          <li class="filters__item" id="Dairy">Dairy</li>
-          <li class="filters__item" id="Deli">Deli</li>
-          <li class="filters__item" id="Eggs">Eggs</li>
-          <li class="filters__item" id="Fresh_Produce">Fresh Produce</li>
-          <li class="filters__item" id="Meat_&_Seafood">Meat & Seafood</li>
-          <li class="filters__item" id="Pantry_Items">Pantry Items</li>
-          <li class="filters__item" id="Prepared_Foods">Prepared Foods</li>
-          <li class="filters__item" id="Snacks">Snacks</li>
-          <li class="filters__item filters__item--checked" id="all">Show all</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Products -->
     <ul id="products-list" class="products__list">
-      <!-- приклади продуктів -->
       <li class="products__item">
         <div class="products__container_img">
-          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Avocado" class="products__img" />
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
         </div>
         <h2 class="products__title">Avocado</h2>
-        <p class="products__category">Category: <span>Fresh Produce</span></p>
-        <p class="products__size">Size: <span>Each</span></p>
+        <p class="products__category">Category:<span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>Each</span> </p>
         <p class="products__popularity">Popularity: <span>0</span></p>
         <div class="products__svg_price">
           <p class="products__price">$1.99</p>
           <div class="products__svg_container">
-      <svg
-        class="hero__icon"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M22.667 10.667c-12 2.667-14.8 10.893-17.573 17.787l2.52 0.88 1.267-3.067c0.64 0.227 1.307 0.4 1.787 0.4 14.667 0 18.667-22.667 18.667-22.667-1.333 2.667-10.667 3-17.333 4.333s-9.333 7-9.333 9.667c0 2.667 2.333 5 2.333 5 4.333-12.333 17.667-12.333 17.667-12.333z"
-        ></path>
-      </svg>
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
           </div>
+
         </div>
+
+
       </li>
-      <!-- інші товари додай за аналогією -->
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">Tomato</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>200 g</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$3.99</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+
+        <h2 class="products__title">Banana</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>1 piece</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$0.69</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">beetroot</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>1 lb</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$3.99</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">Blueberries</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>6 oz</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$3.99</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">Butternut Squash</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>per ib</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$1.49</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">Cabbage</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>per head</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$1.99</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">Carrots</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>1 lb</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$0.99</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
+
+      <li class="products__item products__last_item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Carrots" class="products__img">
+        </div>
+        <h2 class="products__title">Challots</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>0.5lb</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$1.99</p>
+          <div class="products__svg_container">
+            <svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
+              </path>
+            </svg>
+          </div>
+
+        </div>
+
+      </li>
     </ul>
+
+
+    <div class="products__pagination_container">
+
+      <div class="products__pagination_container">
+
+
+        <div class="products__pagination_box">
+          <svg class = "products__pagination_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M16.5 16L12.5 12L16.5 8" stroke="#A3A3A3" stroke-opacity="0.3" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.5 16L8.5 12L12.5 8" stroke="#A3A3A3" stroke-opacity="0.3" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="products__pagination_box">
+          <svg class="products__pagination_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none">
+            <path d="M14 16L10 12L14 8" stroke="#A3A3A3" stroke-opacity="0.3" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <ul class="products__pagination_list">
+          <li class="products__pagination_item">
+            <p class="products__pagination_text">1</p>
+          </li>
+          <li class="products__pagination_item products__pagination_item_green">
+            <p class="products__pagination_text products__pagination_text_white">2</p>
+          </li>
+          <li class="products__pagination_item products__deleting">
+            <p class="products__pagination_text">3</p>
+          </li>
+          <li class="products__pagination_item products__deleting">
+            <p class="products__pagination_text ">4</p>
+          </li>
+          <li class="products__pagination_item">
+            <p class="products__pagination_text">...</p>
+          </li>
+        </ul>
+        <div class="products__pagination_box">
+          <svg class="products__pagination_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none">
+            <path d="M10 16L14 12L10 8" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+        </div>
+      </div>
+      <div class="products__pagination_box">
+        <svg class="products__pagination_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none">
+          <path d="M8 16L12 12L8 8" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M12 16L16 12L12 8" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
