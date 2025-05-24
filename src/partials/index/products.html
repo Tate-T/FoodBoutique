@@ -1,31 +1,86 @@
-<section class="products">
-  <div class="container products__container">
-    <h2 class="products__title">Продукти</h2>
-    <button class="products__sort-button" onclick="sortByPopularity()">Сортувати за популярністю</button>
-    <div class="products__list">
-      <div class="products__card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Apple" class="products__image" />
-        <h3 class="products__name">Apple</h3>
-        <p class="products__category">Fruits</p>
-        <p class="products__popularity">Popularity: 5</p>
-      </div>
-      <div class="products__card">
-        <img src="https://cdn-icons-png.flaticon.com/512/590/590685.png" alt="Bread" class="products__image" />
-        <h3 class="products__name">Bread</h3>
-        <p class="products__category">Bakery</p>
-        <p class="products__popularity">Popularity: 2</p>
-      </div>
-      <div class="products__card">
-        <img src="https://cdn-icons-png.flaticon.com/512/415/415682.png" alt="Milk" class="products__image" />
-        <h3 class="products__name">Milk</h3>
-        <p class="products__category">Dairy</p>
-        <p class="products__popularity">Popularity: 8</p>
-      </div>
-      <div class="products__card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Cheese" class="products__image" />
-        <h3 class="products__name">Cheese</h3>
-        <p class="products__category">Dairy</p>
-        <p class="products__popularity">Popularity: 6</p>
+<section class="filters-products">
+  <div class="container">
+    <!-- Filters -->
+    <h2 class="filters__title">Filters:</h2>
+    <div class="filters__body">
+      <form id="filters-form" class="filters__form">
+        <label class="filters__label">
+          <input
+            placeholder="Search for anything"
+            type="text"
+            class="filters__input"
+            id="filters-input"
+          />
+        </label>
+        <button class="filters__sub" type="submit">
+      <svg
+        class="hero__icon"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22.667 10.667c-12 2.667-14.8 10.893-17.573 17.787l2.52 0.88 1.267-3.067c0.64 0.227 1.307 0.4 1.787 0.4 14.667 0 18.667-22.667 18.667-22.667-1.333 2.667-10.667 3-17.333 4.333s-9.333 7-9.333 9.667c0 2.667 2.333 5 2.333 5 4.333-12.333 17.667-12.333 17.667-12.333z"
+        ></path>
+      </svg>
+        </button>
+      </form>
+
+      <div class="filters__categories">
+        <button id="filters-categories" class="filters__btn" type="button">
+          <p id="filters-categories-text">Categories</p>
+      <svg
+        class="hero__icon"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22.667 10.667c-12 2.667-14.8 10.893-17.573 17.787l2.52 0.88 1.267-3.067c0.64 0.227 1.307 0.4 1.787 0.4 14.667 0 18.667-22.667 18.667-22.667-1.333 2.667-10.667 3-17.333 4.333s-9.333 7-9.333 9.667c0 2.667 2.333 5 2.333 5 4.333-12.333 17.667-12.333 17.667-12.333z"
+        ></path>
+      </svg>
+        </button>
+        <ul class="filters__list is-hidden" id="filters-categories-list">
+          <li class="filters__item" id="Beverages">Beverages</li>
+          <li class="filters__item" id="Breads_&_Bakery">Breads / Bakery</li>
+          <li class="filters__item" id="Dairy">Dairy</li>
+          <li class="filters__item" id="Deli">Deli</li>
+          <li class="filters__item" id="Eggs">Eggs</li>
+          <li class="filters__item" id="Fresh_Produce">Fresh Produce</li>
+          <li class="filters__item" id="Meat_&_Seafood">Meat & Seafood</li>
+          <li class="filters__item" id="Pantry_Items">Pantry Items</li>
+          <li class="filters__item" id="Prepared_Foods">Prepared Foods</li>
+          <li class="filters__item" id="Snacks">Snacks</li>
+          <li class="filters__item filters__item--checked" id="all">Show all</li>
+        </ul>
       </div>
     </div>
+
+    <!-- Products -->
+    <ul id="products-list" class="products__list">
+      <!-- приклади продуктів -->
+      <li class="products__item">
+        <div class="products__container_img">
+          <img src="/src/images/desktop/x1/avocado@1x.webp" alt="Avocado" class="products__img" />
+        </div>
+        <h2 class="products__title">Avocado</h2>
+        <p class="products__category">Category: <span>Fresh Produce</span></p>
+        <p class="products__size">Size: <span>Each</span></p>
+        <p class="products__popularity">Popularity: <span>0</span></p>
+        <div class="products__svg_price">
+          <p class="products__price">$1.99</p>
+          <div class="products__svg_container">
+      <svg
+        class="hero__icon"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22.667 10.667c-12 2.667-14.8 10.893-17.573 17.787l2.52 0.88 1.267-3.067c0.64 0.227 1.307 0.4 1.787 0.4 14.667 0 18.667-22.667 18.667-22.667-1.333 2.667-10.667 3-17.333 4.333s-9.333 7-9.333 9.667c0 2.667 2.333 5 2.333 5 4.333-12.333 17.667-12.333 17.667-12.333z"
+        ></path>
+      </svg>
+          </div>
+        </div>
+      </li>
+      <!-- інші товари додай за аналогією -->
+    </ul>
   </div>
+</section>
