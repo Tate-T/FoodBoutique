@@ -1,0 +1,74 @@
+.products {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  &__sort-button {
+    display: block;
+    margin: 0 auto 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  &__card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+  }
+
+  &__category {
+    font-size: 14px;
+    color: #666;
+  }
+
+  &__popularity {
+    font-size: 14px;
+    color: #888;
+  }
+}
