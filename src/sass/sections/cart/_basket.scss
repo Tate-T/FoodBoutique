@@ -43,13 +43,21 @@
     border-radius: 7px;
     transition: background-color, color, $st-animation;
     fill: $text-color;
-    margin-right: 49px;
+    margin-right: 23px;
     margin-left: auto;
+    padding: 5px 12px;
 
     &:hover {
       background-color: $highlight-color;
       color: $bg-color;
       fill: $bg-color;
+    }
+
+    &:focus {
+      background-color: $highlight-color;
+      color: $bg-color;
+      fill: $bg-color;
+      outline: none;
     }
   }
 
@@ -67,10 +75,214 @@
   }
 
   &__list {
-    background-color: red;
     margin-top: 46px;
     width: 549px;
     height: 520px;
+    overflow-x: hidden;
+padding-right: 30px;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background: rgba(1, 1, 1, 0.08);
+    }
+  }
+
+  &__product {
+    position: relative;
+    @include flexbox($justify: none);
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(1, 1, 1, 0.1);
+
+    &--square {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+
+    &--content {
+      @include flexbox($align: none, $justify: none);
+      flex-direction: column;
+      height: 120px;
+      gap: 12px;
+    }
+
+    &--title {
+      color: $text-color;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+    &--wrap {
+      @include flexbox;
+      gap: 16px;
+    }
+
+    &--text {
+      color: rgba(1, 1, 1, 0.3);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 116.667%;
+    }
+
+    &--bold {
+      color: $text-color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 128.571%;
+      margin-left: 4px;
+    }
+
+    &--price {
+      color: $text-color;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      margin-top: 32px;
+    }
+
+    &--number {
+      color: $text-color;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      position: absolute;
+      top: 4px;
+      left: calc(50% - width/2);
+    }
+
+    &--close {
+      position: absolute;
+      top: 40px;
+      right: 30px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      background-color: $bg-color;
+      @include flexbox;
+      transition: background-color $st-animation;
+      fill: $text-color;
+
+      &:hover {
+        background-color: $highlight-color;
+        fill: $bg-color;
+      }
+
+      &:focus {
+        background-color: $highlight-color;
+        fill: $bg-color;
+        outline: none;
+      }
+    }
+
+    &--icon {
+      width: 20px;
+      height: 20px;
+      fill: inherit;
+      transition: fill $st-animation;
+    }
+
+    &--controls {
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      width: 115px;
+      height: 34px;
+      border-radius: 100px;
+      border: 1px solid rgba(1, 1, 1, 0.1);
+      @include flexbox;
+      gap: 46px;
+    }
+
+    &--btn {
+      position: relative;
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      @include flexbox;
+      background-color: $bg-color;
+      border-radius: 4px;
+      transition: background-color $st-animation;
+
+      &:hover {
+        background-color: $highlight-color;
+      }
+
+      &:focus {
+        background-color: $highlight-color;
+        outline: none;
+      }
+    }
+
+    &--minus {
+      height: 2px;
+      width: 12px;
+      background-color: $text-color;
+      border-radius: 2px;
+      transition: background-color $st-animation;
+    }
+
+    &--btn:hover &--minus {
+      background-color: $bg-color;
+    }
+
+     &--btn:focus &--minus {
+      background-color: $bg-color;
+    }
+
+    &--plus {
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      height: 2px;
+      width: 12px;
+      background-color: $text-color;
+      border-radius: 2px;
+
+      &:last-child {
+        height: 12px;
+        width: 2px;
+        top: 2.5px;
+      left: 8px;
+      }
+    }
+
+    &--btn:hover &--plus {
+      background-color: $bg-color;
+    }
+
+    &--btn:focus &--plus {
+      background-color: $bg-color;
+    }
+  }
+
+  &__product:first-child {
+    padding-top: 0;
+  }
+
+  &__product:first-child &__product--close {
+    top: 0;
+  }
+
+  &__product:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  &__product:last-child &__product--controls {
+    bottom: 0;
   }
 
   &__order {
@@ -143,9 +355,10 @@
     border-radius: 30px;
     border: 1px solid rgba(1, 1, 1, 0.3);
     background-color: $bg-color;
+    transition: outline $st-animation;
 
     &:nth-child(4) {
-        padding-left: 78px;
+      padding-left: 78px;
     }
 
     &::placeholder {
@@ -167,7 +380,7 @@
       left: 20px;
     }
 
-     &--text:nth-child(2) {
+    &--text:nth-child(2) {
       top: 84px;
     }
   }
@@ -190,6 +403,13 @@
       background-color: $bg-color;
       color: $highlight-color;
       box-shadow: 0 0 25px 10px rgba($highlight-color, 0.5);
+    }
+
+    &:focus {
+      background-color: $bg-color;
+      color: $highlight-color;
+      box-shadow: 0 0 25px 10px rgba($highlight-color, 0.5);
+      outline: none;
     }
   }
 }

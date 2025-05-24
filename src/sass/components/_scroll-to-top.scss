@@ -7,8 +7,8 @@
   background-color: $highlight-color;
   border-radius: 50%;
   @include flexbox;
-  gap: 12px;
-    transition: background,  box-shadow, $st-animation;
+  gap: 10px;
+  transition: background, box-shadow, $st-animation;
 
   &:hover {
     background-color: $bg-color;
@@ -16,6 +16,16 @@
   }
 
   &:hover &__arrow {
+    background-color: $highlight-color;
+  }
+
+  &:focus {
+    background-color: $bg-color;
+    outline: none;
+    box-shadow: 0 0 25px 10px rgba($highlight-color, 0.5);
+  }
+
+  &:focus &__arrow {
     background-color: $highlight-color;
   }
 
@@ -28,10 +38,10 @@
   }
 
   &__arrow:first-child {
-    transform: rotate(45deg);
+    transform: rotate(42deg);
   }
 
   &__arrow:last-child {
-    transform: rotate(-45deg);
+    transform: rotate(-42deg);
   }
 }
