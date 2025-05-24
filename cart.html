@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link href=https://fonts.cdnfonts.com/css/pp-neue-montreal rel=stylesheet><title>Cart</title><link rel=stylesheet href=cart.cbd3335b.css><body>
+<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link href=https://fonts.cdnfonts.com/css/pp-neue-montreal rel=stylesheet><title>Cart</title><link rel=stylesheet href=cart.3f6d19a1.css><body>
     <header class=header>
   <div class="container header__container">
     <a href=index.html class=header__logo>
@@ -35,7 +35,36 @@
           Delete all
           <svg xmlns:xmlns=http://www.w3.org/2000/svg class=basket__icon viewBox="0 0 32 32"><path d="M25 9.093 22.907 7 16 13.907 9.093 7 7 9.093 13.907 16 7 22.907 9.093 25 16 18.093 22.907 25 25 22.907 18.093 16Z"/></svg>
         </button>
-        <ul class=basket__list></ul>
+        <ul class=basket__list>
+          <li class=basket__product>
+            <div class=basket__product--square></div>
+            <div class=basket__product--content>
+              <h4 class=basket__product--title>Avocado</h4>
+              <div class=basket__product--wrap>
+                <p class=basket__product--text>
+                  Category:<span class=basket__product--bold>Fresh Produce</span>
+                </p>
+                <p class=basket__product--text>
+                  Size:<span class=basket__product--bold>Each</span>
+                </p>
+              </div>
+              <p class=basket__product--price>$1.99</p>
+            </div>
+            <button class=basket__product--close>
+              <svg xmlns:xmlns=http://www.w3.org/2000/svg class=basket__product--icon viewBox="0 0 32 32"><path d="M25 9.093 22.907 7 16 13.907 9.093 7 7 9.093 13.907 16 7 22.907 9.093 25 16 18.093 22.907 25 25 22.907 18.093 16Z"/></svg>
+            </button>
+            <div class=basket__product--controls>
+              <button class="basket__product--btn basket__product--remove">
+                <div class=basket__product--minus></div>
+              </button>
+              <p class=basket__product--number>3</p>
+              <button class="basket__product--add basket__product--btn">
+                <div class=basket__product--plus></div>
+                <div class=basket__product--plus></div>
+              </button>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class=basket__order>
         <h5 class=basket__subtitle>Your Order</h5>
@@ -58,8 +87,7 @@
   </div>
 </section>
 
-    <div>
-    <h1>Basket modal</h1>
+    <div class=basket__modal--backdrop>
 </div>
     <footer>
     <h1>Footer</h1>
@@ -73,6 +101,6 @@
 </a>
 
 
-    <script type=module src=FoodBoutique.ba6a8a2c.js></script>
+    <script type=module src=cart.e2e5bc45.js></script>
 
 
