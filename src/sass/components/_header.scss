@@ -27,6 +27,20 @@
       fill: $highlight-color;
     }
 
+    &:focus {
+      background: $highlight-color;
+      fill: $bg-color;
+      outline: none;
+    }
+
+    &:focus &--circle {
+      background-color: $bg-color;
+    }
+
+    &:focus &--icon {
+      fill: $highlight-color;
+    }
+
     &--circle {
       width: 32px;
       height: 32px;
@@ -64,6 +78,11 @@
     &:hover {
       background-color: $hover-color;
     }
+
+    &:focus {
+      background-color: $hover-color;
+      outline: none;
+    }
   }
 
   &__cart {
@@ -71,12 +90,12 @@
     gap: 10px;
     height: 48px;
     padding: 0 8px;
-border-radius: 30px;
+    border-radius: 30px;
     fill: $bg-color;
     transition: background, fill, $st-animation;
-      color: $text-color;
+    color: $text-color;
 
-     &:hover {
+    &:hover {
       background: $hover-color;
       fill: $hover-color;
       color: $bg-color;
@@ -86,13 +105,24 @@ border-radius: 30px;
       background-color: $bg-color;
     }
 
+     &:focus {
+      background: $hover-color;
+      fill: $hover-color;
+      color: $bg-color;
+      outline: none;
+    }
+
+    &:focus &--circle {
+      background-color: $bg-color;
+    }
+
     &--circle {
       width: 38px;
       height: 38px;
       border-radius: 30px;
       background-color: $highlight-color;
       @include flexbox;
-        transition: background $st-animation;
+      transition: background $st-animation;
     }
 
     &--icon {
@@ -101,12 +131,12 @@ border-radius: 30px;
     }
 
     &--link {
-          font-size: 18px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 500;
       line-height: 133.333%;
       text-transform: uppercase;
-        transition: color $st-animation;
+      transition: color $st-animation;
     }
   }
 
