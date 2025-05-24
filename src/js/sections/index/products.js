@@ -5,7 +5,7 @@ const getFilteredProducts = async (keyword, category, id , sort) => {
     ).then((response) => response.json());
   } catch (e) {
     return e;
-  }
+  } 
 };
 
 
