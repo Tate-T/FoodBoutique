@@ -1,12 +1,13 @@
 const getFilteredProducts = async (keyword, category, id , sort) => {
   try {
     return await fetch(
-      `https://682dfb9c746f8ca4a47b717c.mockapi.io/foodboutique/products${keyword}${sort}&category=${category}&page=${id}&limit=9`
+      `https://food-boutique.b.goit.study/api/products?keyword=${keyword}${sort}&category=${category}&page=${id}&limit=9`
     ).then((response) => response.json());
   } catch (e) {
     return e;
   }
 };
+
 
 let keyword = "";
 let category = "";
@@ -113,7 +114,6 @@ document
 
 document.querySelector("#filters-alphabet").addEventListener("click", (e) => {
   e.currentTarget.nextElementSibling.classList.toggle("is-hidden");
-  console.log( e.currentTarget.nextElementSibling)
 });
 
 document
@@ -132,5 +132,4 @@ document
       sort = e.target.id;
     }
     makeMarkup(keyword, category, 1, sort);
-    console.log("ll")
   });
