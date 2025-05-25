@@ -28,7 +28,46 @@
             ></path>
           </svg>
         </button>
-        <ul class="basket__list"></ul>
+        <ul class="basket__list">
+          <li class="basket__product">
+            <div class="basket__product--square"></div>
+            <div class="basket__product--content">
+              <h4 class="basket__product--title">Avocado</h4>
+              <div class="basket__product--wrap">
+                <p class="basket__product--text">
+                  Category:<span class="basket__product--bold"
+                    >Fresh Produce</span
+                  >
+                </p>
+                <p class="basket__product--text">
+                  Size:<span class="basket__product--bold">Each</span>
+                </p>
+              </div>
+              <p class="basket__product--price">$1.99</p>
+            </div>
+            <button class="basket__product--close">
+              <svg
+                class="basket__product--icon"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25 9.093l-2.093-2.093-6.907 6.907-6.907-6.907-2.093 2.093 6.907 6.907-6.907 6.907 2.093 2.093 6.907-6.907 6.907 6.907 2.093-2.093-6.907-6.907 6.907-6.907z"
+                ></path>
+              </svg>
+            </button>
+            <div class="basket__product--controls">
+              <button class="basket__product--btn basket__product--remove">
+                <div class="basket__product--minus"></div>
+              </button>
+              <p class="basket__product--number">3</p>
+              <button class="basket__product--btn basket__product--add">
+                <div class="basket__product--plus"></div>
+                <div class="basket__product--plus"></div>
+              </button>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="basket__order">
         <h5 class="basket__subtitle">Your Order</h5>
