@@ -1,44 +1,140 @@
-    footer {
-      background-color: #6a8e48;
-      color: white;
-      padding: 40px 20px 20px;
-      margin-top: 40px;
-    }
+footer {
+  background-color: #6a8e48;
+  color: white;
+  padding: 40px 20px 20px;
+  padding-left: 0;
+  margin-top: 40px;
 
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-    }
+  .footer-title-div {
+    @include flexbox(center, start);
+  }
 
-    .footer-left, .footer-center, .footer-right {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
       flex: 1;
-      padding: 10px;
+      padding: 20px;
       min-width: 200px;
-    }
 
-    .footer-left h2 {
-      font-family: 'Georgia', serif;
+      h2 {
+        font-family: 'Georgia', serif;
+      }
     }
+  }
 
-    .socials a {
+  .footer-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+  }
+
+  .footer-subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    width: 335px;
+  }
+
+  .footer-text {
+    margin-top: 14px;
+    margin-bottom: 80px;
+    color: #E8E8E2B2;
+    font-family: Neue Montreal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .footer-form-text {
+    color: $bg-color;
+    font-family: Neue Montreal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .footer__logo--icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+    fill: #6D8434;
+    border: 7px solid white;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .socials {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    column-gap: 12px;
+
+    a {
       color: white;
       font-size: 20px;
       margin-right: 10px;
       text-decoration: none;
     }
 
-    .subscribe input[type="email"] {
+    .footer-fb-logo {
+      fill: #E8E8E2;
+      border: 1px solid #E8E8E24D;
+      border-radius: 30%;
+      width: 40px;
+      height: 40px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+    .footer-Inst-logo {
+      fill: #E8E8E2;
+      border: 1px solid #E8E8E24D;
+      border-radius: 30%;
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+    }
+    .footer-YT-logo {
+      fill: #E8E8E2;
+      border: 1px solid #E8E8E24D;
+      border-radius: 30%;
+      width: 40px;
+      height: 40px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-right: 9px;
+      padding-left: 9px;
+    }
+  }
+
+  .subscribe {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    width: 335px;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+
+    input[type="email"] {
       padding: 10px;
       border: 1px solid white;
       border-radius: 20px;
       width: 100%;
       margin-bottom: 10px;
+      background-color: $highlight-color;
+
+      &::placeholder {
+        color: $bg-color;
+      }
     }
 
-    .subscribe button {
+    button {
       width: 100%;
       padding: 10px;
       border: none;
@@ -48,10 +144,33 @@
       font-weight: bold;
       cursor: pointer;
     }
+  }
 
-    .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #ddd;
+  .footer-form-send {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+    width: 202px;
+    margin-left: 20px;
+  }
+
+  
+  input,
+  textarea {
+    color: white;
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
+  }
+  select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
