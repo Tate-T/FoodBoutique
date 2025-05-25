@@ -1,3 +1,218 @@
+
+.filters {
+    padding-bottom: 40px;
+
+    @media screen and (min-width:1304px) {
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        color: rgba(1, 1, 1, 0.3);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.29;
+        margin-bottom: 8px;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @media screen and (min-width:768px) {
+            flex-direction: row;
+            gap: 8px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        width: 100%;
+
+        @media screen and (min-width:768px) {
+            width: 269px;
+        }
+    }
+
+   
+
+    &__input {
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid rgba(1, 1, 1, 0.3);
+        background-color: transparent;
+        padding: 14px 20px;
+        color: #010101;
+        font-family: "Neue Montreal";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.29;
+
+        &::placeholder {
+            color: #010101;
+            font-family: "Neue Montreal";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.29;
+        }
+
+        @media screen and (min-width:768px) {
+            font-size: 18px;
+            line-height: 1.33;
+
+            &::placeholder {
+                font-size: 18px;
+                line-height: 1.33;
+            }
+        }
+    }
+
+    &__sub {
+        background-color: transparent;
+        line-height: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(0, -50%);
+    }
+
+    &__search {
+        fill: #010101;
+    }
+
+    &__categories {
+        position: relative;
+
+        @media screen and (min-width:768px) {
+            width: 189px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 20px;
+        color: #010101;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.29;
+        border-radius: 30px;
+        border: 1px solid rgba(1, 1, 1, 0.30);
+        background-color: transparent;
+        align-items: center;
+
+        @media screen and (min-width:768px) {
+            font-size: 18px;
+            line-height: 1.33;
+        }
+    }
+
+    &__icon {
+        fill: none;
+        stroke: #010101;
+    }
+
+    &__list {
+        z-index: 1;
+        position: absolute;
+        bottom: -314px;
+        left: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 15px;
+        background: #fafafa;
+        box-shadow: 0px 20px 69px 0px rgba(0, 0, 0, 0.07), 0px 4px 11.212px 0px rgba(0, 0, 0, 0.04);
+
+        @media screen and (min-width:768px) {
+            bottom: -380px;
+        }
+    }
+
+    &__item {
+        padding: 4px 20px;
+        cursor: pointer;
+        color: rgba(1, 1, 1, 0.5);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.29;
+
+        &:first-child {
+            padding-top: 14px;
+        }
+
+        &:last-child {
+            padding-bottom: 14px;
+        }
+
+        &:hover {
+            color: #6d8434;
+        }
+
+        @media screen and (min-width:768px) {
+            font-size: 18px;
+            line-height: 1.33;
+        }
+    }
+
+    &__item--checked {
+        color: #010101;
+    }
+
+    &__alphabet {
+        position: relative;
+
+        @media screen and (min-width:768px) {
+            width: 200px;
+        }
+
+    }
+
+    &__alphabet &__btn {
+        background-color: #fafafa;
+        border: none;
+    }
+
+    &__alphabet &__list {
+        bottom: -210px;
+
+        @media screen and (min-width:768px) {
+            bottom: -252px;
+        }
+
+    }
+}
+
+.products {
+    &__nocards {
+        width: 371px;
+        margin: 0 auto;
+    }
+
+    &__notitle {
+        color: #010101;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 14px;
+    }
+
+    &__noaccent {
+        color: #6d8434;
+    }
+
+    &__nodesc {
+        color: rgba(1, 1, 1, 0.7);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.33;
+    }
+}
+
 .products {
     flex: auto;
 
@@ -245,4 +460,9 @@
             display: none !important;
         }
     }
+}
+
+
+.is-hidden {
+  display: none;
 }
