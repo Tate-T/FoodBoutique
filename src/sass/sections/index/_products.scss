@@ -3,9 +3,7 @@
   position: absolute;
   z-index: 1000;
 }
-.is-hidden {
-  display: none;
-}
+
 .filters {
     padding-bottom: 40px;  
 
@@ -50,14 +48,14 @@
         background-color: transparent;
         padding: 14px 20px;
         color: #010101;
-        font-family: "Neue Montreal";
+
         font-size: 14px;
         font-weight: 400;
         line-height: 1.29;
 
         &::placeholder {
             color: #010101;
-            font-family: "Neue Montreal";
+            
             font-size: 14px;
             font-weight: 400;
             line-height: 1.29;
@@ -294,7 +292,7 @@
 
     &__title {
         color: #010101;
-        font-family: "Neue Montreal";
+        
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
@@ -305,7 +303,7 @@
 
     &__category {
         color: rgba(1, 1, 1, 0.30);
-        font-family: "Neue Montreal";
+        
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -316,7 +314,7 @@
 
     &__category span {
         color: #010101;
-        font-family: "Neue Montreal";
+        
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -324,7 +322,7 @@
 
     &__size {
         color: rgba(1, 1, 1, 0.30);
-        font-family: "Neue Montreal";
+        
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -332,7 +330,7 @@
 
     &__size span {
         color: #010101;
-        font-family: "Neue Montreal";
+        
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -340,7 +338,7 @@
 
     &__popularity {
         color: rgba(1, 1, 1, 0.30);
-        font-family: "Neue Montreal";
+        
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -351,7 +349,7 @@
 
     &__popularity span {
         color: #010101;
-        font-family: "Neue Montreal";
+        
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -359,7 +357,7 @@
 
     &__price {
         color: #010101;
-        font-family: "Neue Montreal";
+        
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
@@ -469,6 +467,243 @@
     }
 }
 
+.discount {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 32px;
+    }
+
+    @media screen and (min-width: 1304px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    gap: 20px;
+    width: 335px;
+    height: 232px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #fafafa;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      width: 336px;
+      margin-bottom: 100px;
+    }
+
+    @media screen and (min-width: 1304px) {
+      width: 275px;
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 21px;
+      margin-top: 21px;
+      text-overflow: ellipsis;
+      width: 124px;
+      white-space: nowrap;
+
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &__box-img {
+    width: 304px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #e8e8e2;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1304px) {
+      width: 243px;
+    }
+  }
+
+  &__image {
+    width: 114px;
+    height: 105px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 1304px) {
+      width: 105px;
+    }
+  }
+
+  &__svg-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__svg-container {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: #6d8434;
+    width: 34px;
+    height: 34px;
+  }
+
+  &__basket {
+    width: 18px;
+    height: 18px;
+    fill: #fafafa;
+  }
+
+  &__svg-discount {
+    width: 60px;
+    height: 60px;
+    background-color: #a3a3a3;
+    fill: #fafafa;
+    border-radius: 50%;
+    position: absolute;
+    left: 265px;
+    top: 3px;
+
+    @media screen and (min-width: 1304px) {
+      left: 205px;
+      top: -3px;
+    }
+  }
+}
+
+.popular {
+    &__title {
+        color: #010101;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+            line-height: 1.14;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 13px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1304px) {
+            width: 275px;
+        }
+    }
+
+    &__item {
+        padding: 12px;
+        border-radius: 10px;
+        background: #fafafa;
+        display: flex;
+        gap: 10px;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            width: 275px;
+        }
+    }
+
+    &__wrapper {
+        width: 74px;
+        height: 74px;
+        border-radius: 10px;
+        background-color: #e8e8e2;
+    }
+
+    
+
+   
+
+    &__subtitle {
+        color: #010101;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11;
+        margin-bottom: 12px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        width: 152px;
+    }
+
+    &__point {
+        color: rgba(1, 1, 1, 0.3);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+    }
+
+    &__span {
+        color: #010101;
+    }
+
+    &__cart {
+        line-height: 0;
+        background-color: #e8e8e2;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 4px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #a3a3a3;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__icon {
+        fill: #a3a3a3;
+    }
+}
 
 .is-hidden {
   display: none;
