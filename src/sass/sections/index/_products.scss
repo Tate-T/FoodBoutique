@@ -1,6 +1,13 @@
-
+.filters__list {
+  border: 1px solid red;
+  position: absolute;
+  z-index: 1000;
+}
+.is-hidden {
+  display: none;
+}
 .filters {
-    padding-bottom: 40px;
+    padding-bottom: 40px;  
 
     @media screen and (min-width:1304px) {
         padding-bottom: 60px;
