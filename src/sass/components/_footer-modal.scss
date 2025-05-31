@@ -1,0 +1,173 @@
+
+
+.footer-modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  align-items: center;
+  justify-content: center;
+    z-index: 2; 
+}
+
+
+.footer-modal-content {
+  background: white;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+row-gap: 22px;
+  width: 335px;
+ 
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.footer-modal-content-height{
+height: 400px;
+}
+.footer-modal-content-modi-height{
+height: 276px;
+}
+
+
+
+
+.footer-modal-center-div{
+    display: flex;
+    flex-direction: column;
+    width: 248px;
+   
+}
+
+.footer-modal-center-div-margin{
+margin: 0;
+
+}
+.footer-modal-center-div-modi-margin{
+margin: 100px;
+
+}
+.footer-modal-center-div-height{
+height: 134px;
+
+}
+.footer-modal-center-div-modi-height{
+height: 102px;
+
+}
+
+
+.footer-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.footer-modal-title {
+    color: #010101;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+
+.footer-modal-text {
+  font-size: 16px;
+  color: #010101B2;
+  margin-bottom: 22px;
+  width: 248px;
+}
+
+
+.footer-modal-image {
+    width: 100%;
+    height: 144px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  
+
+
+
+.footer-modal-content {
+row-gap: 3px;
+  width: 490px;
+
+}
+
+.footer-modal-content-height{
+height: 400px;
+}
+.footer-modal-content-modi-height{
+height: 308px;
+}
+
+
+
+
+.footer-modal-center-div{
+
+    width: 328px;
+   
+}
+
+.footer-modal-center-div-margin{
+margin-top: 0;
+
+}
+.footer-modal-center-div-modi-margin{
+margin-top: 100px;
+
+}
+.footer-modal-center-div-height{
+height: 148px;
+
+}
+.footer-modal-center-div-modi-height{
+height: 108px;
+
+}
+
+
+.footer-modal-close {
+  font-size: 25px;
+  top: 30px;
+  right: 30px;
+}
+
+
+.footer-modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.footer-modal-text {
+  font-size: 16px;
+  margin-bottom: -10px;
+  width: 334px;
+}
+
+
+.footer-modal-image {
+    width: 100%;
+    height: 159px;
+
+}
+
+
+
+}
+
