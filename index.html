@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link href=https://fonts.cdnfonts.com/css/pp-neue-montreal rel=stylesheet><title>Food Boutique</title><link rel=stylesheet href=FoodBoutique.c012c612.css><body>
+<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link href=https://fonts.cdnfonts.com/css/pp-neue-montreal rel=stylesheet><title>Food Boutique</title><link rel=stylesheet href=FoodBoutique.d1b8d0c1.css><body>
     <header class=header>
   <div class="container header__container">
     <a href=index.html class=header__logo>
@@ -322,8 +322,8 @@
     <div class=footer-right>
       <p class=footer-form-text>Subscribe and learn about new products!</p>
       <div class=subscribe>
-        <input type=email placeholder=Email class=subscribe-input>
-        <button class=footer-form-send>Send</button>
+        <input type=email placeholder=Email class=subscribe-input id=footer-input>
+        <button class=footer-form-send onclick=greetFooterSubscribe()>Send</button>
       </div>
     </div>
     </div>
@@ -336,8 +336,17 @@
     </div>
   </div>
 </footer>
-    <div>
-    <h1>Subscribtion</h1>
+    
+
+<div class=footer-modal id=footer-modal>
+    <div class=footer-modal-content id=footer-modal-content>
+        <button class=footer-modal-close onclick=closeFooterModal()>✖</button>
+        <div class=footer-modal-center-div id=footer-modal-center-div> 
+            <h2 class=footer-modal-title id=footer-modal-title></h2>
+            <p class=footer-modal-text id=footer-modal-text></p>
+        </div>
+        <img src=basket.57946164.png alt="products basket" class=footer-modal-image id=footer-modal-image>
+    </div>
 </div>
     <a href=#top class=scrollToTop>
   <div class=scrollToTop__arrow></div>
@@ -345,6 +354,6 @@
 </a>
 
 
-    <script type=module src=FoodBoutique.ba6a8a2c.js></script>
+    <script type=module src=FoodBoutique.0c310cf7.js></script>
   
 
