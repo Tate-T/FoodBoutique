@@ -220,8 +220,6 @@
     }
 }
 
-
-
 .products {
     flex: auto;
 
@@ -469,4 +467,9 @@
             display: none !important;
         }
     }
+}
+
+
+.is-hidden {
+  display: none;
 }
