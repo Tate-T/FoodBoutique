@@ -7,7 +7,7 @@
     }
 
     &__title {
-        color: $dark-text-30;
+        color: rgba(1, 1, 1, 0.3);
         font-size: 14px;
         font-weight: 400;
         line-height: 1.29;
@@ -34,16 +34,16 @@
         }
     }
 
-    &__label {}
+  
 
     &__input {
         width: 100%;
         border-radius: 30px;
 
-        border: 1px solid $dark-text-30;
+        border: 1px solid rgba(1, 1, 1, 0.3);
         background-color: transparent;
         padding: 14px 20px;
-        color: $dark-text-100;
+        color: #010101;
         font-family: "Neue Montreal";
         font-size: 14px;
         font-weight: 400;
@@ -51,11 +51,11 @@
 
         &:hover,
         &:focus {
-            border: 1px solid $accent-color-100;
+            border: 1px solid #6d8434;
         }
 
         &::placeholder {
-            color: $dark-text-100;
+            color: #010101;
             font-family: "Neue Montreal";
             font-size: 14px;
             font-weight: 400;
@@ -84,7 +84,7 @@
     }
 
     &__search {
-        fill: $dark-text-100;
+        fill: #010101;
     }
 
     &__categories {
@@ -104,7 +104,7 @@
         display: flex;
         justify-content: space-between;
         padding: 14px 20px;
-        color: $dark-text-100;
+        color: #010101;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.29;
@@ -116,7 +116,7 @@
 
         &:hover,
         &:focus {
-            border: 1px solid $accent-color-100;
+            border: 1px solid #6d8434;
         }
 
         @media screen and (min-width:768px) {
@@ -132,7 +132,7 @@
 
     &__icon {
         fill: none;
-        stroke: $dark-text-100;
+        stroke: #010101;
     }
 
     &__list {
@@ -145,7 +145,7 @@
         flex-direction: column;
 
         border-radius: 15px;
-        background: $light-color-100;
+        background: #fafafa;
         box-shadow: 0px 20px 69px 0px rgba(0, 0, 0, 0.07), 0px 4px 11.212px 0px rgba(0, 0, 0, 0.04);
 
         @media screen and (min-width:768px) {
@@ -156,7 +156,7 @@
     &__item {
         padding: 4px 20px;
         cursor: pointer;
-        color: $dark-text-50;
+        color:rgba(1, 1, 1, 0.5);
         font-size: 14px;
         font-weight: 400;
         line-height: 1.29;
@@ -170,7 +170,7 @@
         }
 
         &:hover {
-            color: $accent-color-100;
+            color: #6d8434;
         }
 
         @media screen and (min-width:768px) {
@@ -180,7 +180,7 @@
     }
 
     &__item--checked {
-        color: $dark-text-100;
+        color: #010101;
     }
 
     &__alphabet {
@@ -193,7 +193,7 @@
     }
 
     &__alphabet &__btn {
-        background-color: $light-color-100;
+        background-color: #fafafa;
         border: none;
     }
 
@@ -214,7 +214,7 @@
     }
 
     &__notitle {
-        color: $dark-text-100;
+        color: #010101;
         text-align: center;
         font-size: 20px;
         font-weight: 500;
@@ -223,11 +223,11 @@
     }
 
     &__noaccent {
-        color: $accent-color-100;
+        color: #6d8434;
     }
 
     &__nodesc {
-        color: $dark-text-70;
+        color: rgba(1, 1, 1, 0.7);
         text-align: center;
         font-size: 18px;
         font-weight: 400;
@@ -241,13 +241,13 @@
     &__svg_btn {
         width: 34px;
         height: 34px;
-        color: $light-color-100;
+        color: #fafafa;
     }
 
     &__green {
         width: max-content;
         line-height: 0;
-        background-color: $accent-color-100;
+        background-color: #6d8434;
         border-radius: 50%;
         position: absolute;
         top: -3px;
@@ -255,6 +255,6 @@
     }
 
     &__discount {
-        fill: $light-color-100;
+        fill: #fafafa;
     }
 }

@@ -30,11 +30,11 @@
         width: 40px;
         height: 40px;
         border-radius: 60px;
-        background: $light-color-100;
+        background: #fafafa;
         line-height: 0;
 
         &:hover {
-            background-color: $accent-color-100;
+            background-color: #6d8434;
         }
 
         @media screen and (min-width: 768px) {}
@@ -42,26 +42,26 @@
 
     &__disable {
         cursor: default;
-        background: $light-color-100 !important;
+        background: #fafafa;
     }
 
     &__disable &__svg {
-        stroke: $pagination-30 !important;
+        stroke: rgba(163, 163, 163, 0.3);
     }
 
     &__svg {
-        stroke: $pagination-100;
+        stroke: #a3a3a3;
         fill: none;
 
         @media screen and (min-width: 768px) {}
     }
 
     &__box:hover &__svg {
-        stroke: $light-color-100;
+        stroke: #fafafa;
     }
 
     &__text {
-        color: $pagination-100;
+        color: #a3a3a3;
 
         @media screen and (min-width: 768px) {}
     }
@@ -86,18 +86,18 @@
         justify-content: center;
         align-items: center;
         background-color: transparent;
-        color: $pagination-100;
+        color: #a3a3a3;
 
         &:hover {
-            background-color: $light-color-100;
-            color: $accent-color-100;
+            background-color: #fafafa;
+            color: #6d8434;
         }
     }
 
     &__accent &__btn {
         border-radius: 60px;
-        background: #6D8434 !important;
-        color: #FAFAFA !important;
+        background: #6D8434   ;
+        color: #FAFAFA  ;
 
         @media screen and (min-width: 768px) {}
     }

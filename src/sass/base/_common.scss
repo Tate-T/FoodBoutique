@@ -11,7 +11,7 @@ html {
 body {
   font-family: 'Neue Montreal';
   font-weight: 500;
-  background-color: $main-bg-100;
+  background-color:#e8e8e2;
 }
 
 .is-hidden {
@@ -21,8 +21,8 @@ body {
 }
 
 *::selection {
-  background-color: $accent-color-100;
-  color: $light-color-100;
+  background-color: #6d8434;
+  color: #fafafa;
 }
 
 .backdrop {
@@ -31,7 +31,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $dark-text-40;
+  background-color: rgba(1, 1, 1, 0.4);
 }
 
 .no-scroll {
@@ -43,7 +43,7 @@ body {
 }
 
 .display-none {
-  display: none !important;
+  display: none ;
 }
 
 .main {

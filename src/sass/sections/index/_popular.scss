@@ -1,6 +1,6 @@
 .popular {
     &__title {
-        color: $dark-text-100;
+        color: #010101;
         font-size: 24px;
         font-weight: 500;
         line-height: 1.17;
@@ -32,7 +32,7 @@
     &__item {
         padding: 12px;
         border-radius: 10px;
-        background: $light-color-100;
+        background: #fafafa;
         display: flex;
         gap: 10px;
         position: relative;
@@ -46,7 +46,7 @@
         width: 74px;
         height: 74px;
         border-radius: 10px;
-        background-color: $main-bg-100;
+        background-color: #e8e8e2;
         padding: 9px;
     }
 
@@ -55,7 +55,7 @@
     &__text {}
 
     &__subtitle {
-        color: $dark-text-100;
+        color: #010101;
         font-size: 18px;
         font-weight: 500;
         line-height: 1.11;
@@ -76,19 +76,19 @@
     }
 
     &__point {
-        color: $dark-text-30;
+        color: rgba(1, 1, 1, 0.3);
         font-size: 12px;
         font-weight: 400;
         line-height: 1.17;
     }
 
     &__span {
-        color: $dark-text-100;
+        color: #010101;
     }
 
     &__cart {
         line-height: 0;
-        background-color: $main-bg-100;
+        background-color: #e8e8e2;
         position: absolute;
         top: 12px;
         right: 12px;
@@ -96,21 +96,21 @@
         border-radius: 50%;
         width: 20px;
         height: 20px;
-        color: $accent-color-100;
+        color: #6d8434;
         font-size: 12px;
         font-weight: 400;
 
         &:hover {
-            background-color: $accent-color-100;
-            color: $main-bg-100;
+            background-color: #6d8434;
+            color: #e8e8e2;
         }
     }
 
     &__cart:hover &__icon {
-        fill: $main-bg-100;
+        fill: #e8e8e2;
     }
 
     &__icon {
-        fill: $accent-color-100;
+        fill: #6d8434;
     }
 }
