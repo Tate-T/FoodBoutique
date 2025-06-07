@@ -6,3 +6,8 @@ body {
     background-color: $bg-color;
     font-family: "PP Neue Montreal";
 }
+.is-hidden {
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+}   

@@ -1,11 +1,6 @@
-.filters__list {
-  border: 1px solid red;
-  position: absolute;
-  z-index: 1000;
-}
-
 .filters {
-    padding-bottom: 40px;  
+    padding-bottom: 40px;
+    padding-top: 74px;
 
     @media screen and (min-width:1304px) {
         padding-bottom: 60px;
@@ -39,7 +34,7 @@
         }
     }
 
-   
+    &__label {}
 
     &__input {
         width: 100%;
@@ -48,14 +43,14 @@
         background-color: transparent;
         padding: 14px 20px;
         color: #010101;
-
+        font-family: "Neue Montreal";
         font-size: 14px;
         font-weight: 400;
         line-height: 1.29;
 
         &::placeholder {
             color: #010101;
-            
+            font-family: "Neue Montreal";
             font-size: 14px;
             font-weight: 400;
             line-height: 1.29;
@@ -216,20 +211,49 @@
         font-weight: 400;
         line-height: 1.33;
     }
+
+    &__item {
+        position: relative;
+    }
+
+    &__svg_btn {
+        width: 34px;
+        height: 34px;
+        color: #fafafa;
+    }
+
+    &__green {
+        width: max-content;
+        line-height: 0;
+        background-color: #6d8434;
+        border-radius: 50%;
+        position: absolute;
+        top: -3px;
+        right: 10px;
+    }
+
+    &__discount {
+        fill: #fafafa;
+    }
 }
 
 .products {
-    flex: auto;
-
-    padding-bottom: 31px;
-
 
     &__list {
         display: flex;
-        gap: 40px;
+        gap: 40px 20px;
         flex-wrap: wrap;
         flex-basis: calc((100% - 20px) / 3);
-        padding-bottom: 40px;
+    }
+
+    &__svg_btn {
+        display: flex;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 30px;
+        background: #6D8434;
     }
 
     &__item {
@@ -252,15 +276,6 @@
         justify-content: space-between;
     }
 
-    &__svg_container {
-        display: flex;
-        padding: 8px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 30px;
-        background: #6D8434;
-    }
 
     &__basket {
         width: 18px;
@@ -268,6 +283,7 @@
         fill: #FAFAFA;
 
     }
+
 
     &__container_img {
         width: 255px;
@@ -292,7 +308,7 @@
 
     &__title {
         color: #010101;
-        
+        font-family: "Neue Montreal";
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
@@ -303,7 +319,7 @@
 
     &__category {
         color: rgba(1, 1, 1, 0.30);
-        
+        font-family: "Neue Montreal";
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -314,7 +330,7 @@
 
     &__category span {
         color: #010101;
-        
+        font-family: "Neue Montreal";
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -322,7 +338,7 @@
 
     &__size {
         color: rgba(1, 1, 1, 0.30);
-        
+        font-family: "Neue Montreal";
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -330,7 +346,7 @@
 
     &__size span {
         color: #010101;
-        
+        font-family: "Neue Montreal";
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -338,7 +354,7 @@
 
     &__popularity {
         color: rgba(1, 1, 1, 0.30);
-        
+        font-family: "Neue Montreal";
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -349,7 +365,7 @@
 
     &__popularity span {
         color: #010101;
-        
+        font-family: "Neue Montreal";
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
@@ -357,79 +373,10 @@
 
     &__price {
         color: #010101;
-        
+        font-family: "Neue Montreal";
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
-    }
-
-
-
-
-    &__pagination_container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-    }
-
-    &__pagination_list {
-        display: flex;
-        gap: 8px;
-    }
-
-    &____pagination_box {
-        display: flex;
-        padding: 8px;
-        align-items: center;
-        gap: 8px;
-        border-radius: 60px;
-        background: #FAFAFA;
-        width: 25px;
-        height: 25px;
-    }
-
-    &__pagination_text {
-        color: gray;
-    }
-
-
-    &__pagination_item {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__pagination_item_green {
-        border-radius: 60px;
-        background: #6D8434;
-    }
-
-    &__pagination_text_white {
-        color: #FAFAFA;
-    }
-
-    &__pagination_svg {
-        width: 24px;
-        height: 24px;
-        fill: #A3A3A3;
-    }
-
-    &__pagination_box {
-        display: flex;
-        padding: 8px;
-        align-items: center;
-        gap: 8px;
-        border-radius: 60px;
-        background: #FAFAFA;
-        margin-right: 8px;
-    }
-
-    &__last_item {
-        display: block;
     }
 }
 
@@ -445,15 +392,22 @@
         &__list {
             gap: 32px;
             display: flex;
-            justify-content: center;
         }
 
         &__last_item {
             display: none;
         }
 
+        &__item {
+            width: 336px;
+            height: 360px;
+        }
 
 
+        &__container_img {
+            width: 296px;
+            height: 178px;
+        }
 
     }
 }
@@ -464,6 +418,119 @@
         &__deleting {
             display: none !important;
         }
+
+        &__list {
+            justify-content: center;
+            display: flex;
+        }
+    }
+}
+
+.popular {
+    &__title {
+        color: #010101;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+            line-height: 1.14;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 13px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1304px) {
+            width: 275px;
+        }
+    }
+
+    &__item {
+        padding: 12px;
+        border-radius: 10px;
+        background: #fafafa;
+        display: flex;
+        gap: 10px;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            width: 275px;
+        }
+    }
+
+    &__wrapper {
+        width: 74px;
+        height: 74px;
+        border-radius: 10px;
+        background-color: #e8e8e2;
+        padding: 9px;
+    }
+
+    &__img {}
+
+    &__text {}
+
+    &__subtitle {
+        color: #010101;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11;
+        margin-bottom: 12px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        width: 152px;
+    }
+
+    &__point {
+        color: rgba(1, 1, 1, 0.3);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+    }
+
+    &__span {
+        color: #010101;
+    }
+
+    &__cart {
+        line-height: 0;
+        background-color: #e8e8e2;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 4px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #6d8434;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__icon {
+        fill: #6d8434;
     }
 }
 
@@ -584,7 +651,7 @@
   &__svg-discount {
     width: 60px;
     height: 60px;
-    background-color: #a3a3a3;
+    background-color: #6d8434;
     fill: #fafafa;
     border-radius: 50%;
     position: absolute;
@@ -597,114 +664,106 @@
     }
   }
 }
+.pagination {
 
-.popular {
-    &__title {
-        color: #010101;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.17;
-        margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: 1304px) {
+        padding-bottom: 61px;
+    }
+
+    & .container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
 
         @media screen and (min-width: 768px) {
-            font-size: 28px;
-            line-height: 1.14;
+            gap: 32px;
         }
     }
 
     &__list {
         display: flex;
-        flex-direction: column;
-        gap: 14px;
+        gap: 4px;
 
         @media screen and (min-width: 768px) {
-            flex-direction: row;
-            gap: 13px;
-            flex-wrap: wrap;
-            width: 100%;
+            gap: 8px;
         }
+    }
 
-        @media screen and (min-width: 1304px) {
-            width: 275px;
+    &__wrap {
+        display: flex;
+        gap: 4px;
+
+        @media screen and (min-width: 768px) {
+            gap: 8px;
         }
+    }
+
+    &__box {
+        width: 40px;
+        height: 40px;
+        border-radius: 60px;
+        background: #fafafa;
+        line-height: 0;
+
+
+        @media screen and (min-width: 768px) {}
+    }
+         &__disable{
+            cursor: default;
+         }
+
+    &__disable &__svg {
+        fill: rgba(163, 163, 163, 0.3);
+    }
+
+    &__svg {
+        fill: #a3a3a3;
+
+        @media screen and (min-width: 768px) {}
+    }
+
+    &__text {
+        color: #a3a3a3;
+
+        @media screen and (min-width: 768px) {}
     }
 
     &__item {
-        padding: 12px;
-        border-radius: 10px;
-        background: #fafafa;
+        width: 40px;
+        height: 40px;
         display: flex;
-        gap: 10px;
-        position: relative;
+        justify-content: center;
+        align-items: center;
 
-        @media screen and (min-width: 768px) {
-            width: 275px;
-        }
+        @media screen and (min-width: 768px) {}
     }
 
-    &__wrapper {
-        width: 74px;
-        height: 74px;
-        border-radius: 10px;
-        background-color: #e8e8e2;
-    }
-
-    
-
-   
-
-    &__subtitle {
-        color: #010101;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.11;
-        margin-bottom: 12px;
-
-        @media screen and (min-width: 768px) {
-            font-size: 20px;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-    }
-
-    &__points {
+    &__btn {
+        border: none;
         display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
-        width: 152px;
-    }
-
-    &__point {
-        color: rgba(1, 1, 1, 0.3);
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 1.17;
-    }
-
-    &__span {
-        color: #010101;
-    }
-
-    &__cart {
-        line-height: 0;
-        background-color: #e8e8e2;
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        padding: 4px;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
         color: #a3a3a3;
-        font-size: 12px;
-        font-weight: 400;
+
+
+        @media screen and (min-width: 768px) {}
     }
 
-    &__icon {
-        fill: #a3a3a3;
-    }
-}
+    &__accent &__btn {
+        border-radius: 60px;
+        background: #6D8434;
+        color: #FAFAFA;
 
-.is-hidden {
-  display: none;
+        @media screen and (min-width: 768px) {}
+    }
+
 }
