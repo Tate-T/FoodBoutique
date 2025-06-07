@@ -1,17 +1,9 @@
-const getFilteredProducts = async (keyword, category, id , sort) => {
-  try {
-    return await fetch(
-      `https://682dfb9c746f8ca4a47b717c.mockapi.io/foodboutique/products${keyword}${sort}&category=${category}&page=${id}&limit=9`
-    ).then((response) => response.json());
-  } catch (e) {
-    return e;
-  } 
-};
- 
 
-let keyword = ""; 
-let category = "";
-let sort = "";
+import { getFilteredProducts } from "../../markup/getFilteredProducts";
+
+export let keyword = "";
+export let category = "";
+export let sort = "";
 
 const makeMarkup = (keyword, category, id, sort) => {
   if (category.includes("&")) {
@@ -25,6 +17,7 @@ const makeMarkup = (keyword, category, id, sort) => {
     Choose other catogories or write the name of a product.
   </p>
 </div>`;
+    document.querySelector("#pagination-section").classList.add("display-none");
     return;
   }
   getFilteredProducts(keyword, category, id, sort).then((data) => {
@@ -41,6 +34,9 @@ const makeMarkup = (keyword, category, id, sort) => {
     to find the perfect product for you.
   </p>
 </div>`;
+      document
+        .querySelector("#pagination-section")
+        .classList.add("display-none");
       return;
     }
     document.querySelector("#products-list").innerHTML = data.results
@@ -54,35 +50,45 @@ const makeMarkup = (keyword, category, id, sort) => {
           price,
           is10PercentOff,
           popularity,
-        }) => `
-    <li id="${_id}" data-product="true" class="products__item">
-        <div class="products__container_img">
-            <img src="${img}" alt="Carrots" class="products__img">
-        </div>
-        <h2 class="products__title">${name}</h2>
-        <p class="products__category">Category: <span>${category}</span></p>
-        <p class="products__size">Size: <span>${size}</span></p>
-        <p class="products__popularity">Popularity: <span>${popularity}</span></p>
-        <div class="products__svg_price">
-            <p class="products__price">$${price}</p>
-            <div  data-productadd="true"  class="products__svg_container">
-                ${
-                  JSON.parse(localStorage.getItem("cart"))
-                    .map((item) => item.id)
-                    .includes(_id)
-                    ? "✓"
-                    : `<svg class="products__basket" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.8 1.6c-0.424 0-0.831 0.169-1.131 0.469s-0.469 0.707-0.469 1.131c0 0.424 0.169 0.831 0.469 1.131s0.707 0.469 1.131 0.469h1.952l0.488 1.955c0.005 0.023 0.010 0.045 0.016 0.067l2.173 8.688-1.429 1.427c-2.016 2.016-0.589 5.462 2.262 5.462h13.737c0.424 0 0.831-0.169 1.131-0.469s0.469-0.707 0.469-1.131-0.169-0.831-0.469-1.131c-0.3-0.3-0.707-0.469-1.131-0.469h-13.738l1.6-1.6h10.537c0.297-0 0.588-0.083 0.841-0.239s0.457-0.38 0.59-0.646l4.8-9.6c0.122-0.244 0.18-0.515 0.167-0.787s-0.094-0.537-0.237-0.769c-0.143-0.232-0.343-0.423-0.581-0.556s-0.506-0.203-0.779-0.203h-17.152l-0.496-1.989c-0.087-0.346-0.286-0.653-0.568-0.873s-0.628-0.339-0.984-0.339h-3.2zM25.6 26.4c0 0.637-0.253 1.247-0.703 1.697s-1.060 0.703-1.697 0.703c-0.636 0-1.247-0.253-1.697-0.703s-0.703-1.060-0.703-1.697c0-0.636 0.253-1.247 0.703-1.697s1.060-0.703 1.697-0.703c0.637 0 1.247 0.253 1.697 0.703s0.703 1.061 0.703 1.697zM10.4 28.8c0.636 0 1.247-0.253 1.697-0.703s0.703-1.060 0.703-1.697c0-0.636-0.253-1.247-0.703-1.697s-1.061-0.703-1.697-0.703-1.247 0.253-1.697 0.703c-0.45 0.45-0.703 1.061-0.703 1.697s0.253 1.247 0.703 1.697 1.061 0.703 1.697 0.703z">
-              </path>
-            </svg>`
-                }
-            </div>
-        </div>
-    </li>
-    `
+        }) => `<li id="${_id}" data-product="true" class="products__item">
+        ${
+          is10PercentOff
+            ? `<div class="products__green">
+  <svg class="products__discount" width="60" height="60">
+    <use href="#discount"></use>
+  </svg>
+</div>`
+            : ""
+        }
+                <div class="products__container_img">
+                    <img src="${img}" alt="${name}" class="products__img">
+                </div>
+                <h2 class="products__title">${name}</h2>
+                <p class="products__category">Category: <span>${category}</span></p>
+                <p class="products__size">Size: <span>${size}</span></p>
+                <p class="products__popularity">Popularity: <span>${popularity}</span></p>
+                <div class="products__svg_price">
+                    <p class="products__price">$${price}</p>
+                    <button  data-productadd="true" class="products__svg_btn">
+                    ${
+                      JSON.parse(localStorage.getItem("cart"))
+                        .map((item) => item.id)
+                        .includes(_id)
+                        ? "✓"
+                        : `
+                        <svg class="products__basket">
+                            <use href="#cart"></use>
+                        </svg>`
+                    }
+                    </button>
+                </div>
+            </li>`
       )
       .join("");
+
+    document
+      .querySelector("#pagination-section")
+      .classList.remove("display-none");
   });
 };
 
@@ -137,16 +143,59 @@ document
   });
 
 
-  const getPopularProducts = async () => {
-  try {
-    return await fetch(
-      "https://682dfb9c746f8ca4a47b717c.mockapi.io/foodboutique/products"
-    ).then((response) => response.json());
-  } catch (e) {
-    return e;
-  }
-};
 
+import { getFilteredProducts } from "../../markup/getFilteredProducts";
+
+
+
+const productsListContainer = document.querySelector("#products-list");
+
+getFilteredProducts("", "", 1, "").then((data) => {
+    productsListContainer.innerHTML = data.results
+        .map(
+            ({ _id, name, img, category, size, price, popularity }) => `
+    <li id="${_id}" class="products__item">
+        <div class="products__container_img">
+            <img src="${img}" alt="${name}" class="products__img">
+        </div>
+        <h2 class="products__title">${name}</h2>
+        <p class="products__category">Category: <span>${category}</span></p>
+        <p class="products__size">Size: <span>${size}</span></p>
+        <p class="products__popularity">Popularity: <span>${popularity}</span></p>
+        <div class="products__svg_price">
+            <p class="products__price">$${price}</p>
+            <button class="products__svg_btn add-to-cart-btn">
+                <svg class="products__basket" width="18" height="18">
+                    <use href="#cart"></use>
+                </svg>
+            </button>
+        </div>
+    </li>
+    `
+        )
+        .join("");
+});
+
+
+productsListContainer.addEventListener('click', (event) => {
+    const clickedButton = event.target.closest('.add-to-cart-btn');
+    if (!clickedButton) {
+        return;
+    }
+
+
+    const useElement = clickedButton.querySelector('use');
+    if (useElement) {
+        const currentIcon = useElement.getAttribute('href');
+        if (currentIcon === '#cart') {
+            useElement.setAttribute('href', '#check'); 
+        }
+    }
+});
+
+
+
+import { getPopularProducts } from "../../markup/getPopularProducts";
 
 getPopularProducts().then((products) => {
   document.querySelector("#popular__list").innerHTML = products
@@ -164,8 +213,7 @@ getPopularProducts().then((products) => {
             </li>
             <li class="popular__point">
               Size: <span class="popular__span">${size}</span>
-            </li>
-            <li class="popular__point">
+            </li>            <li class="popular__point">
               Popularity: <span class="popular__span">${popularity}</span>
             </li>
           </ul>
@@ -176,12 +224,235 @@ getPopularProducts().then((products) => {
             .map((item) => item.id)
             .includes(_id)
             ? "✓"
-            : ` <svg class="popular__icon" width="12" height="12">
-            <use href="./svg/icons.svg#cart"></use>
-          </svg>`
+            : `
+    <svg class="popular__icon" width="12" height="12">
+      <use href="#cart"></use>
+    </svg>`
         }
         </button>
       </li>`
     )
     .join("");
 });
+
+
+import { getDiscountProducts } from "../../markup/getDiscountProducts";
+getDiscountProducts().then((products) => {
+    let markUp = "";
+    for (let index = 0; index < 2; index+= 1) {
+        markUp += `
+             <li id='${products[index]._id}' class="discount__item">
+            <svg class="discount__svg-discount">
+              <use href="#discount"></use>
+            </svg>
+            <div class="discount__box-img">
+              <img
+                src="${products[index].img}"
+                alt="${products[index].name}"
+                class="discount__image"
+              />
+            </div>
+            <div class="discount__svg-price">
+              <h3 class="discount__item-title">${products[index].name}</h3>
+              <div class="discount__item-wrap">
+                <p class="discount__price">$${products[index].price}</p>
+                <div class="discount__svg-container">
+                  <svg class="discount__basket">
+                    <use href="#cart"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          `
+        
+    }
+    document.querySelector(".discount__list").innerHTML = markUp
+})
+
+
+import { getFilteredProducts } from "../../markup/getFilteredProducts";
+import { category, keyword, sort } from "./products";
+
+let userPage = 1;
+
+const makeMarkup2 = (page, category, keyword, sort) => {
+  getFilteredProducts(keyword, category, page, sort).then((products) => {
+    document.querySelector("#products-list").innerHTML = products.results
+      .map(
+        ({
+          _id,
+          name,
+          img,
+          category,
+          size,
+          price,
+          is10PercentOff,
+          popularity,
+        }) =>
+          `<li id="${_id}" data-product="true" class="products__item">
+        ${
+          is10PercentOff
+            ? `<div class="products__green">
+  <svg class="products__discount" width="54" height="54">
+    <use href="#discount"></use>
+  </svg>
+</div>`
+            : ""
+        }
+                <div class="products__container_img">
+                    <img src="${img}" alt="${name}" class="products__img">
+                </div>
+                <h2 class="products__title">${name}</h2>
+                <p class="products__category">Category: <span>${category}</span></p>
+                <p class="products__size">Size: <span>${size}</span></p>
+                <p class="products__popularity">Popularity: <span>${popularity}</span></p>
+                <div class="products__svg_price">
+                    <p class="products__price">$${price}</p>
+                    <button  data-productadd="true" class="products__svg_btn">
+                    ${
+                      JSON.parse(localStorage.getItem("cart"))
+                        .map((item) => item.id)
+                        .includes(_id)
+                        ? "✓"
+                        : `
+                        <svg class="products__basket">
+                            <use href="#cart"></use>
+                        </svg>`
+                    }
+                    </button>
+                </div>
+            </li>`
+      )
+      .join("");
+  });
+};
+
+export const makePagination = (page, category, keyword, sort) => {
+  getFilteredProducts(keyword, category, page, sort).then(({ totalPages }) => {
+    let markup = "";
+    for (let i = page; i <= totalPages && i <= page + 3; i += 1) {
+      markup += `<li id='${i}' class="pagination__item ${
+        page === i ? "pagination__accent" : ""
+      }">
+        <button class="pagination__btn">${i}
+        </button>
+      </li>`;
+    }
+    if (totalPages > 4) {
+      markup += `<li class="pagination__item">
+        <p class="pagination__text">...</p>
+      </li>`;
+    }
+    document.querySelector("#pagination-list").innerHTML = markup;
+    if (page - 2 < 1) {
+      document
+        .querySelector("#double-prev")
+        .classList.add("pagination__disable");
+    } else {
+      document
+        .querySelector("#double-prev")
+        .classList.remove("pagination__disable");
+    }
+    if (page - 1 < 1) {
+      document.querySelector("#prev").classList.add("pagination__disable");
+    } else {
+      document.querySelector("#prev").classList.remove("pagination__disable");
+    }
+    if (page + 2 > totalPages) {
+      document
+        .querySelector("#double-next")
+        .classList.add("pagination__disable");
+    } else {
+      document
+        .querySelector("#double-next")
+        .classList.remove("pagination__disable");
+    }
+    if (page + 1 > totalPages) {
+      document.querySelector("#next").classList.add("pagination__disable");
+    } else {
+      document.querySelector("#next").classList.remove("pagination__disable");
+    }
+  });
+};
+
+makePagination(userPage, category, keyword, sort);
+
+document.querySelector("#pagination-list").addEventListener("click", (e) => {
+  if (e.target.classList.contains("pagination__btn")) {
+    if (Number.parseInt(e.target.parentElement.id) === userPage) {
+      return;
+    }
+    userPage = Number.parseInt(e.target.parentElement.id);
+    makePagination(userPage, category, keyword, sort);
+    makeMarkup2(userPage, category, keyword, sort);
+  }
+});
+
+document.querySelector("#next").addEventListener("click", (e) => {
+  if (e.currentTarget.classList.contains("pagination__disable")) {
+    return;
+  }
+  userPage += 1;
+  makePagination(userPage, category, keyword, sort);
+  makeMarkup2(userPage, category, keyword, sort);
+});
+
+document.querySelector("#double-next").addEventListener("click", (e) => {
+  if (e.currentTarget.classList.contains("pagination__disable")) {
+    return;
+  }
+  userPage += 2;
+  makePagination(userPage, category, keyword, sort);
+  makeMarkup2(userPage, category, keyword, sort);
+});
+
+document.querySelector("#prev").addEventListener("click", (e) => {
+  if (e.currentTarget.classList.contains("pagination__disable")) {
+    return;
+  }
+  userPage -= 1;
+  makePagination(userPage, category, keyword, sort);
+  makeMarkup2(userPage, category, keyword, sort);
+});
+
+document.querySelector("#double-prev").addEventListener("click", (e) => {
+  if (e.currentTarget.classList.contains("pagination__disable")) {
+    return;
+  }
+  userPage -= 2;
+  makePagination(userPage, category, keyword, sort);
+  makeMarkup2(userPage, category, keyword, sort);
+});
+
+document.querySelector("#filters-form").addEventListener("submit", (e) => {
+  userPage = 1;
+  makePagination(userPage, category, keyword, sort);
+});
+
+document
+  .querySelector("#filters-categories-list")
+  .addEventListener("click", (e) => {
+    userPage = 1;
+    makePagination(userPage, category, keyword, sort);
+  });
+
+document
+  .querySelector("#filters-alphabet-list")
+  .addEventListener("click", (e) => {
+    userPage = 1;
+    makePagination(userPage, category, keyword, sort);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
