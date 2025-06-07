@@ -1,0 +1,130 @@
+.discount {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 32px;
+    }
+
+    @media screen and (min-width: 1304px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    gap: 20px;
+    width: 335px;
+    height: 232px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #fafafa;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      width: 336px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1304px) {
+      width: 275px;
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 21px;
+      margin-top: 21px;
+      text-overflow: ellipsis;
+      width: 124px;
+      white-space: nowrap;
+
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &__box-img {
+    width: 304px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #e8e8e2;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1304px) {
+      width: 243px;
+    }
+  }
+
+  &__image {
+    width: 114px;
+    height: 105px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 1304px) {
+      width: 105px;
+    }
+  }
+
+  &__svg-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__svg-container {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: #6d8434;
+    width: 34px;
+    height: 34px;
+  }
+
+  &__basket {
+    width: 18px;
+    height: 18px;
+    fill: #fafafa;
+  }
+
+  &__svg-discount {
+    width: 60px;
+    height: 60px;
+    background-color: $accent-color-100;
+    fill: $light-color-100;
+    border-radius: 50%;
+    position: absolute;
+    left: 265px;
+    top: 3px;
+
+    @media screen and (min-width: 1304px) {
+      left: 205px;
+      top: -3px;
+    }
+  }
+}

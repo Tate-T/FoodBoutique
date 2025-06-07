@@ -1,0 +1,116 @@
+.popular {
+    &__title {
+        color: $dark-text-100;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+            line-height: 1.14;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 13px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1304px) {
+            width: 275px;
+        }
+    }
+
+    &__item {
+        padding: 12px;
+        border-radius: 10px;
+        background: $light-color-100;
+        display: flex;
+        gap: 10px;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            width: 275px;
+        }
+    }
+
+    &__wrapper {
+        width: 74px;
+        height: 74px;
+        border-radius: 10px;
+        background-color: $main-bg-100;
+        padding: 9px;
+    }
+
+    &__img {}
+
+    &__text {}
+
+    &__subtitle {
+        color: $dark-text-100;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11;
+        margin-bottom: 12px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        width: 152px;
+    }
+
+    &__point {
+        color: $dark-text-30;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+    }
+
+    &__span {
+        color: $dark-text-100;
+    }
+
+    &__cart {
+        line-height: 0;
+        background-color: $main-bg-100;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 4px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: $accent-color-100;
+        font-size: 12px;
+        font-weight: 400;
+
+        &:hover {
+            background-color: $accent-color-100;
+            color: $main-bg-100;
+        }
+    }
+
+    &__cart:hover &__icon {
+        fill: $main-bg-100;
+    }
+
+    &__icon {
+        fill: $accent-color-100;
+    }
+}

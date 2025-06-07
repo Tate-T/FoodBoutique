@@ -1,3 +1,4 @@
+@import "./sass/utils/vars";
 @import "./sass/utils/variables";
 @import "./sass/utils/mixins";
 @import "./sass/base/reset";
@@ -5,8 +6,13 @@
 @import "./sass/base/container";
 @import "./sass/components/header";
 @import "./sass/sections/index/hero";
-@import "./sass/sections/index/products";
+@import "./sass/sections/index/filters";
+@import "./sass/sections/index/products" ;
+@import "./sass/sections/index/pagination";
+@import "./sass/sections/index/popular" ;
+@import "./sass/sections/index/discount";
 @import "./sass/sections/index/products-modal";
 @import "./sass/components/footer";
+@import "./sass/sections/index/product";
 @import "./sass/components/scroll-to-top";
 @import "./sass/components/footer-modal";

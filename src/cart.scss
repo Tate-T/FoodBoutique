@@ -1,4 +1,5 @@
 @import "./sass/utils/variables";
+@import "./sass/utils/vars";
 @import "./sass/utils/mixins";
 @import "./sass/base/reset";
 @import "./sass/base/common";
@@ -6,6 +7,9 @@
 @import "./sass/components/header";
 @import "./sass/sections/cart/basket";
 @import "./sass/sections/cart/basket-modal";
-@import "./sass/components/footer";
+
+
+@import "./sass/sections/index/product";
 @import "./sass/components/scroll-to-top";
 @import "./sass/components/footer-modal";
+@import "./sass/components/footer";

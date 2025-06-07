@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.cdnfonts.com/css/pp-neue-montreal"
-      rel="stylesheet"
-    />
-    <title>Food Boutique</title>
-    <link rel="stylesheet" href="./index.scss" />
-  </head>
-  <body>
-    <include src="./partials/components/header.html"></include>
-    <include src="./partials/index/hero.html"></include>
-    <include src="./partials/index/products.html"></include>
-    <include src="./partials/index/products-modal.html"></include>
-    <include src="./partials/components/footer.html"></include>
-    <include src="./partials/components/subscribtion-modal.html"></include>
-    <include src="./partials/components/scroll-to-top.html"></include>
 
-    <script type="module" src="./index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodBoutique</title>
+  <link rel="icon" href="./images/desktop/x1/Ackee@1x.webp" type="image/x-icon" />
+  <link rel="stylesheet" href="./index.scss" />
+</head>
+
+<body>
+  <include src="./partials/index/sprite.html"></include>
+
+  <include src="./partials/components/header.html"></include>
+  <include src="./partials/index/hero.html"></include>
+  <include src="./partials/index/products-modal.html"></include>
+ 
+  <include src="./partials/components/subscribtion-modal.html"></include>
+  <include src="./partials/components/scroll-to-top.html"></include>
+  <include src="./partials/index/filters.html"></include>
+  <section class="main">
+    <div class="container">
+      <div class="main__body">
+        <div class="main__left">
+          <include src="./partials/index/products.html"></include>
+          <include src="./partials/index/pagination.html"></include>
+        </div>
+        <div class="main__right">
+          <include src="./partials/index/popular.html"></include>
+          <include src="./partials/index/discount.html"></include>
+        </div>
+      </div>
+    </div>
+  </section>
+  <include src="./partials/components/footer.html"></include>
+  <include src="./partials/index/product.html"></include>
+
+
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>
