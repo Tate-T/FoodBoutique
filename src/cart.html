@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <linkMore actions
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
       integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
@@ -14,17 +15,20 @@
       href="https://fonts.cdnfonts.com/css/pp-neue-montreal"
       rel="stylesheet"
     />
-    <title>Cart</title>
-    <link rel="stylesheet" href="./cart.scss" />
-  </head>
-  <body>
-    <include src="./partials/components/header.html"></include>
-    <include src="./partials/cart/basket.html"></include>
-    <include src="./partials/cart/basket-modal.html"></include>
-    <include src="./partials/components/footer.html"></include>
-    <include src="./partials/components/subscribtion-modal.html"></include>
-    <include src="./partials/components/scroll-to-top.html"></include>
+  <title>Cart</title>
+  <link rel="stylesheet" href="./cart.scss" />
+</head>
 
-    <script type="module" src="./cart.js"></script>
+<body>
+  <include src="./partials/components/header.html"></include>
+  <include src="./partials/cart/basket.html"></include>
+  <include src="./partials/cart/basket-modal.html"></include>
+
+  <include src="./partials/components/subscribtion-modal.html"></include>
+  <include src="./partials/components/scroll-to-top.html"></include>
+
+
+  <script type="module" src="./cart.js"></script>
 </body>
+
 </html>

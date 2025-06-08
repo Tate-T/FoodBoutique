@@ -1,0 +1,93 @@
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 4px;
+
+    @media screen and (min-width: 768px) {
+      gap: 8px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 4px;
+
+    @media screen and (min-width: 768px) {
+      gap: 8px;
+    }
+  }
+
+  &__svg {
+    stroke: #a3a3a3;
+    fill: none;
+  }
+
+  &__text {
+    color: #a3a3a3;
+  }
+
+  &__disable {
+    background: #fafafa;
+    cursor: default;
+  }
+
+  &__disable &__svg {
+    stroke: rgba(163, 163, 163, 0.3);
+  }
+
+  &__box {
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    line-height: 0;
+    background: #fafafa;
+
+    &:hover {
+      background-color: #6d8434;
+    }
+  }
+
+  &__box:hover &__svg {
+    stroke: #fafafa;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 60px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #a3a3a3;
+
+    &:hover {
+      background-color: #fafafa;
+      color: #6d8434;
+    }
+  }
+
+  &__accent &__btn {
+    background: #6d8434;
+    border-radius: 60px;
+    color: #fafafa;
+  }
+}

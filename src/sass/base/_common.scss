@@ -1,13 +1,75 @@
-html {
-  scroll-behavior: smooth;
+.main__side2 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @media screen and (min-width: 768px) {
+    gap: 64px;
+  }
+
+  @media screen and (min-width: 1304px) {
+    gap: 40px;
+    width: 275px;
+  }
 }
 
+
 body {
-    background-color: $bg-color;
-    font-family: "PP Neue Montreal";
+  font-family: 'PP Neue Montreal';
+  font-weight: 500;
+  background-color:#e8e8e2;
 }
+
 .is-hidden {
   opacity: 0;
   visibility: 0;
   pointer-events: none;
-}   
+}
+
+
+
+
+
+.main {
+  padding-bottom: 80px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1304px) {
+    padding-bottom: 61px;
+  }
+
+}
+
+.main__main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @media screen and (min-width: 768px) {
+    gap: 100px;
+  }
+
+  @media screen and (min-width: 1304px) {
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+  }
+}
+
+.main__side {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (min-width: 768px) {
+    gap: 50px;
+  }
+
+  @media screen and (min-width: 1304px) {
+    width: 925px;
+  }
+}
+
