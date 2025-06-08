@@ -7,7 +7,31 @@
       With Food Boutique, you're not just subscribing to food, you're signing up
       for a fresher, fitter, and happier you.
     </p>
-    <img src="./images/desktop/hero__bg.jpg" alt="hero-bg" class="hero__img" />
+    <!-- <img src="./images/desktop/hero__bg.jpg" alt="hero-bg" class="hero__img" /> -->
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/hero__bg.jpg 1x,
+          ./images/desktop/hero__bg.jpg 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/tablet/hero_bg.png 1x,
+          ./images/tablet/hero_bg.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/phone/hero_bg.png 1x,
+          ./images/phone/hero_bg.png 2x
+        "
+        media="(min-width: 310px)"
+      />
+      <img class="hero__img" src="./images/desktop/hero__bg.jpg" alt="basket" />
+    </picture>
     <div class="hero__circle">
       <svg
         class="hero__icon"
