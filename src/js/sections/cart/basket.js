@@ -2,9 +2,9 @@ import { getUserAPI } from "../../services/getUserAPI";
 import { createCartList } from "../../markup/createCartList";
 const cart = document.querySelector(".basket__list");
 
-getUserAPI(1).then((user) => {
-  cart.innerHTML = createCartList(user.cart);
-});
+// getUserAPI(1).then((user) => {
+//   cart.innerHTML = createCartList(user.cart);
+// });
 
 // document.querySelector(".basket__list").addEventListener("click", (e) => {
 //   if (e.target.classList.contains("basket__product--subtract") || e.target.parentNode.classList.contains("basket__product--subtract")) {
