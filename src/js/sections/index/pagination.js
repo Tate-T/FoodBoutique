@@ -1,4 +1,4 @@
-import { getFilteredProducts } from "../../fetchs/getFilteredProducts";
+import { getFilteredProducts } from "../../markup/getFilteredProducts";
 import { category, keyword, sort } from "./filters";
 
 let userPage = 1;
