@@ -61,7 +61,7 @@ const makeMarkup = (keyword, category, id, sort) => {
             : ""
         }
                 <div class="products__container_img">
-                    <img src="${img}" alt="${name}" class="products__img">
+                    <img src="${img}" alt="${name}" class="products__img"  "> >
                 </div>
                 <h2 class="products__title">${name}</h2>
                 <p class="products__category">Category: <span>${category}</span></p>
