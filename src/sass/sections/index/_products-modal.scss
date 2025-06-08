@@ -1,7 +1,7 @@
 
 
 .product-modal {
-  display: none; 
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,20 +14,60 @@
     z-index: 2; 
 }
 
+.product-modal-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
 
 .product-modal-content {
   background: white;
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: start;
 flex-direction: column;
-row-gap: 22px;
+row-gap: 20px;
   width: 335px;
- 
+ height: 535px;
   text-align: center;
   border-radius: 10px;
   position: relative;
+  padding-left: 20px;
 }
+
+.product-modal-title{
+  font-size: 18px;
+}
+.product-modal-desc{
+ display: flex;
+
+ text-align: start;
+}
+.product-modal-list{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 9px;
+}
+
+
+
+.product-modal-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 295px;
+  height: 212px;
+  border-radius: 10px;
+  background-color: #E8E8E2;
+}
+
+.product-modal-image{
+  width: 160px;
+  height: 160px;
+}
+
 
 .product-modal-close {
   position: absolute;
@@ -38,3 +78,93 @@ row-gap: 22px;
   font-size: 20px;
   cursor: pointer;
 }
+
+.products__container_img{
+  cursor: pointer;
+}
+
+
+.product-modal-button{
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+background-color: #6D8434;
+color: #E8E8E2;
+right: 24px;
+top: 465px;
+
+width: 116px;
+height: 42px;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-right: 24px;
+padding-left: 24px;
+border-radius: 30px;
+
+
+}
+
+
+.product-modal-lower{
+  display: flex;
+  column-gap: 133px;
+}
+
+.product-modal-price{
+padding-top: 22px;
+font-weight: 500;
+font-style: 18px;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  
+.product-modal-content{
+  flex-direction: column;
+  width: 600px;
+  height: 380px;
+
+}
+
+.product-modal-main-center{
+  display: flex;
+  column-gap: 24px;
+  
+}
+
+
+.product-modal-background{
+  margin-top: 0;
+  width: 240px;
+}
+
+
+
+.product-modal-center{
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  row-gap: 24px;
+}
+
+.product-modal-lower{
+  column-gap: 339px;
+}
+
+.product-modal-price{
+padding-top: 26px;
+}
+}
+
+
+@media screen and (min-width: 1440px) {
+  
+
+
+
+
+
+}
+
