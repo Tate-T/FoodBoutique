@@ -1,0 +1,105 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    @media screen and (min-width: 768px) {
+        gap: 32px;
+    }
+
+
+    &__list {
+        display: flex;
+        gap: 4px;
+
+        @media screen and (min-width: 768px) {
+            gap: 8px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 4px;
+
+        @media screen and (min-width: 768px) {
+            gap: 8px;
+        }
+    }
+
+    &__box {
+        width: 40px;
+        height: 40px;
+        border-radius: 60px;
+        background: #fafafa;
+        line-height: 0;
+
+        &:hover {
+            background-color: #6d8434;
+        }
+
+        @media screen and (min-width: 768px) {}
+    }
+
+    &__disable {
+        cursor: default;
+        background: #fafafa;
+    }
+
+    &__disable &__svg {
+        stroke: rgba(163, 163, 163, 0.3);
+    }
+
+    &__svg {
+        stroke: #a3a3a3;
+        fill: none;
+
+        @media screen and (min-width: 768px) {}
+    }
+
+    &__box:hover &__svg {
+        stroke: #fafafa;
+    }
+
+    &__text {
+        color: #a3a3a3;
+
+        @media screen and (min-width: 768px) {}
+    }
+
+    &__item {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {}
+    }
+
+    &__btn {
+        border: none;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: #a3a3a3;
+
+        &:hover {
+            background-color: #fafafa;
+            color: #6d8434;
+        }
+    }
+
+    &__accent &__btn {
+        border-radius: 60px;
+        background: #6D8434   ;
+        color: #FAFAFA  ;
+
+        @media screen and (min-width: 768px) {}
+    }
+
+}

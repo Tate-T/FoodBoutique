@@ -1,0 +1,64 @@
+<section class="filters">
+  <div class="container">
+    <h2 class="filters__title">Filters:</h2>
+    <div class="filters__body">
+      <form id="filters-form" class="filters__form">
+        <label class="filters__label">
+          <input
+            placeholder="Search for anything"
+            type="text"
+            class="filters__input"
+            id="filters-input"
+          />
+        </label>
+        <button class="filters__sub">
+          <svg class="filters__search" width="20" height="20">
+            <use href="#search"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="filters__categories">
+        <button id="filters-categories" class="filters__btn" type="button">
+          <p id="filters-categories-text">Categories</p>
+          <svg class="filters__icon" width="20" height="20">
+            <use href="#arrow-down"></use>
+          </svg>
+        </button>
+        <ul class="filters__list is-hidden" id="filters-categories-list">
+          <li class="filters__item" id="Beverages">Beverages</li>
+          <li class="filters__item" id="Breads_&_Bakery">Breads / Bakery</li>
+          <li class="filters__item" id="Dairy">Dairy</li>
+          <li class="filters__item" id="Deli">Deli</li>
+          <li class="filters__item" id="Eggs">Eggs</li>
+          <li class="filters__item" id="Fresh_Produce">Fresh Produce</li>
+          <li class="filters__item" id="Meat_&_Seafood">Meat & Seafood</li>
+          <li class="filters__item" id="Pantry_Items">Pantry Items</li>
+          <li class="filters__item" id="Prepared_Foods">Prepared Foods</li>
+          <li class="filters__item" id="Snacks">Snacks</li>
+          <li class="filters__item filters__item--checked" id="all">
+            Show all
+          </li>
+        </ul>
+      </div>
+      <div class="filters__alphabet">
+        <button id="filters-alphabet" class="filters__btn" type="button">
+          <p id="filters-alphabet-text">Sort as</p>
+          <svg class="filters__icon" width="20" height="20">
+            <use href="#arrow-down"></use>
+          </svg>
+        </button>
+        <ul id="filters-alphabet-list" class="filters__list is-hidden">
+          <li class="filters__item" id="&byABC=true">A to Z</li>
+          <li class="filters__item" id="&byABC=false">Z to A</li>
+          <li class="filters__item" id="&byPrice=true">Cheap</li>
+          <li class="filters__item" id="&byPrice=false">Expensive</li>
+          <li class="filters__item" id="&byPopularity=false">Popular</li>
+          <li class="filters__item" id="&byPopularity=true">Not popular</li>
+          <li class="filters__item filters__item--checked" id="allAlphabet">
+            Show all
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
