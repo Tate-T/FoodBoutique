@@ -1,202 +1,145 @@
 .products {
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
 
     &__list {
-        display: flex;
-        gap: 40px 20px;
-  
-       
-        flex-wrap: wrap;
-        flex-basis: calc((100% - 20px) / 3);
-
-        @media screen and (min-width: 1200px) {
-        width: 1200px;
-        margin-left: -180px;
-        }
-    }
-
-    &__svg_btn {
-        display: flex;
-        padding: 8px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 30px;
-        background: #6D8434;
+      display: flex;
+      gap: 32px;
     }
 
     &__item {
-        gap: 20px;
-        width: 295px;
-        height: 363px;
-        flex-shrink: 0;
-        border-radius: 20px;
-        background: #FAFAFA;
-        padding: 20px;
+      width: 336px;
+      height: 360px;
     }
-
-    // &__item:nth-child(3),
-    // &__item:nth-child(6),
-    // &__item:nth-child(9)  {
-    //     gap: 0;
-    // }
-    &__svg_price {
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    &__basket {
-        width: 18px;
-        height: 18px;
-        fill: #FAFAFA;
-
-    }
-
-    &__svg_btn:hover {
-        background-color: #586F1F;
-    }
-
 
     &__container_img {
-        width: 255px;
-        height: 178px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background: #E8E8E2;
-        margin-left: auto;
-        margin-right: auto;
+      width: 296px;
+      height: 178px;
     }
 
-    &__img {
-        width: 140px;
-        height: 140px;
-        border-radius: 10px;
+    &__item:last-child {
+      display: none;
+    }
+  }
 
-
-
+  @media screen and (max-width: 480px) {
+    &__deleting {
+      display: none !important;
     }
 
-    &__title {
-        color: #010101;
-        font-family: "Neue Montreal";
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 24px;
-        margin-bottom: 10px;
-        margin-top: 20px;
-
+    &__list {
+      display: flex;
+      justify-content: center;
     }
+  }
 
-    &__category {
-        color: rgba(1, 1, 1, 0.30);
-        font-family: "Neue Montreal";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        float: left;
-        margin-right: 8px;
+  &__list {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 40px 20px;
+    flex-basis: calc((100% - 20px) / 3);
 
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+      margin-left: -180px;
     }
+  }
 
-    &__category span {
-        color: #010101;
-        font-family: "Neue Montreal";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
+  &__item {
+    flex-shrink: 0;
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 20px;
+    width: 295px;
+    height: 363px;
+    gap: 20px;
+  }
+
+  &__container_img {
+    margin: 0 auto;
+    width: 255px;
+    height: 178px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e2;
+    border-radius: 10px;
+  }
+
+  &__img {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+  }
+
+  &__title {
+    margin: 20px 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "Neue Montreal";
+    color: #010101;
+  }
+
+  &__svg_btn {
+    display: flex;
+    padding: 8px;
+    border-radius: 30px;
+    background: #6d8434;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      background-color: #586f1f;
     }
+  }
 
-    &__size {
-        color: rgba(1, 1, 1, 0.30);
-        font-family: "Neue Montreal";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-    }
+  &__svg_price {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__size span {
-        color: #010101;
-        font-family: "Neue Montreal";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-    }
+  &__basket {
+    width: 18px;
+    height: 18px;
+    fill: #fafafa;
+  }
 
-    &__popularity {
-        color: rgba(1, 1, 1, 0.30);
-        font-family: "Neue Montreal";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        margin-top: 9px;
-        margin-bottom: 30px;
+  &__category,
+  &__size,
+  &__popularity {
+    color: rgba(1, 1, 1, 0.3);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    font-family: "Neue Montreal";
+  }
 
-    }
+  &__category {
+    float: left;
+    margin-right: 8px;
+  }
 
-    &__popularity span {
-        color: #010101;
-        font-family: "Neue Montreal";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-    }
+  &__popularity {
+    margin: 9px 0 30px;
+  }
 
-    &__price {
-        color: #010101;
-        font-family: "Neue Montreal";
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 24px;
-    }
-}
+  &__category span,
+  &__size span,
+  &__popularity span {
+    color: #010101;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    font-family: "Neue Montreal";
+  }
 
-
-
-
-@media screen and (max-width: 768px) {
-    .products {
-
-        max-width: 100%;
-
-
-        &__list {
-            gap: 32px;
-            display: flex;
-        }
-
-
-        &__item {
-            width: 336px;
-            height: 360px;
-        }
-
-
-        &__container_img {
-            width: 296px;
-            height: 178px;
-        }
-
-        &__item:last-child {
-            display: none;
-        }
-
-
-
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .products {
-
-        &__deleting {
-            display: none !important;
-        }
-
-        &__list {
-            justify-content: center;
-            display: flex;
-        }
-    }
+  &__price {
+    color: #010101;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "Neue Montreal";
+  }
 }

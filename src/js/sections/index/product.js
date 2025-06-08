@@ -1,5 +1,39 @@
 import { getProduct } from "../../fetchs/getProduct";
 
+document
+  .querySelector(`[data-productmodal]`)
+  .addEventListener("click", async (e) => {
+    if (
+      e.target.dataset.productaddmodal === "true" ||
+      e.target.closest("[data-productaddmodal]")
+    ) {
+      const target =
+        e.target.dataset.productaddmodal === "true"
+          ? e.target
+          : e.target.closest("[data-productaddmodal]");
+      const array = [...JSON.parse(localStorage.getItem("cart"))];
+      if (
+        array
+          .map((item) => item.id)
+          .includes(e.target.closest("[data-productmodal]").id)
+      ) {
+        return;
+      }
+      array.push({
+        id: e.target.closest("[data-productmodal]").id,
+        count: 1,
+      });
+      target.textContent = "Added ✓";
+      localStorage.setItem("cart", JSON.stringify(array));
+      document.querySelector("#header-cart").textContent = JSON.parse(
+        localStorage.getItem("cart")
+      ).length;
+      document
+        .getElementById(`${e.target.closest("[data-productmodal]").id}`)
+        .querySelector(`[data-productadd='true']`).textContent = "✓";
+    }
+  });
+
 if (!Object.keys(localStorage).includes("cart")) {
   localStorage.setItem("cart", JSON.stringify([]));
 }
@@ -108,36 +142,4 @@ document.querySelector("body").addEventListener("click", async (e) => {
   }
 });
 
-document
-  .querySelector(`[data-productmodal]`)
-  .addEventListener("click", async (e) => {
-    if (
-      e.target.dataset.productaddmodal === "true" ||
-      e.target.closest("[data-productaddmodal]")
-    ) {
-      const target =
-        e.target.dataset.productaddmodal === "true"
-          ? e.target
-          : e.target.closest("[data-productaddmodal]");
-      const array = [...JSON.parse(localStorage.getItem("cart"))];
-      if (
-        array
-          .map((item) => item.id)
-          .includes(e.target.closest("[data-productmodal]").id)
-      ) {
-        return;
-      }
-      array.push({
-        id: e.target.closest("[data-productmodal]").id,
-        count: 1,
-      });
-      target.textContent = "Added ✓";
-      localStorage.setItem("cart", JSON.stringify(array));
-      document.querySelector("#header-cart").textContent = JSON.parse(
-        localStorage.getItem("cart")
-      ).length;
-      document
-        .getElementById(`${e.target.closest("[data-productmodal]").id}`)
-        .querySelector(`[data-productadd='true']`).textContent = "✓";
-    }
-  });
+

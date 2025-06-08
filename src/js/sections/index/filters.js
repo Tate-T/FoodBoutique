@@ -1,5 +1,23 @@
 import { getFilteredProducts } from "../../fetchs/getFilteredProducts";
 
+document
+  .querySelector("#filters-alphabet-list")
+  .addEventListener("click", (e) => {
+    e.currentTarget
+      .querySelector(".filters__item--checked")
+      .classList.remove("filters__item--checked");
+    e.target.classList.add("filters__item--checked");
+    e.currentTarget.classList.add("is-hidden");
+    document.querySelector("#filters-alphabet-text").textContent =
+      e.target.textContent;
+    if (e.target.id === "allAlphabet") {
+      sort = "";
+    } else {
+      sort = e.target.id;
+    }
+    makeMarkup(keyword, category, 1, sort);
+  });
+ 
 export let keyword = "";
 export let category = "";
 export let sort = "";
@@ -123,20 +141,3 @@ document.querySelector("#filters-alphabet").addEventListener("click", (e) => {
   e.currentTarget.nextElementSibling.classList.toggle("is-hidden");
 });
 
-document
-  .querySelector("#filters-alphabet-list")
-  .addEventListener("click", (e) => {
-    e.currentTarget
-      .querySelector(".filters__item--checked")
-      .classList.remove("filters__item--checked");
-    e.target.classList.add("filters__item--checked");
-    e.currentTarget.classList.add("is-hidden");
-    document.querySelector("#filters-alphabet-text").textContent =
-      e.target.textContent;
-    if (e.target.id === "allAlphabet") {
-      sort = "";
-    } else {
-      sort = e.target.id;
-    }
-    makeMarkup(keyword, category, 1, sort);
-  });
