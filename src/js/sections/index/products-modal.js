@@ -9,7 +9,8 @@ window.openProductModal = async function(productId) {
   document.getElementById("product-modal-image").src = product.img;
   document.getElementById("product-modal-image").alt = product.name;
   document.getElementById("product-modal-title").textContent = product.name;
-  // document.getElementById("product-modal-button").id = productId;
+  
+document.querySelector(".product-modal-button").id = productId;
   const props = document.querySelectorAll(".product-modal-property");
   if (props) {
     props[0].innerHTML = `<span style="color:#0101014D;">Category:</span> ${product.category.replace('_', ' ')}`;
