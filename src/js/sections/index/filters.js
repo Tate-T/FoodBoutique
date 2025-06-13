@@ -1,6 +1,6 @@
 import { getFilteredProducts } from "../../markup/getFilteredProducts";
 
-// Экспортирут перемених
+
 export let keyword = "";
 export let category = "";
 export let sort = "";

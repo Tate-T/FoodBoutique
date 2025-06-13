@@ -1,7 +1,7 @@
 import { getPopularProducts } from "../../markup/getPopularProducts";
 
 getPopularProducts().then((products) => {
-  const cart = JSON.parse(localStorage.getItem("cart") || "[]"); // если нет, то пустой массив
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]"); 
 
   document.querySelector("#popular__list").innerHTML = products
     .map(
