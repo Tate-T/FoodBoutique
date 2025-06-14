@@ -91,3 +91,20 @@
     color: #fafafa;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .pagination__box,
+  .pagination__item,
+  .pagination__btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  .pagination {
+    gap: 4px;
+  }
+  .pagination__wrap,
+  .pagination__list {
+    gap: 2px;
+  }
+}
