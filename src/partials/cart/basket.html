@@ -28,40 +28,7 @@
             ></path>
           </svg>
         </button>
-        <ul class="basket__list">
-          <li class="basket__product">
-            <div class="basket__product--square"></div>
-            <div class="basket__product--content">
-              <h4 class="basket__product--title">${product.title}</h4>
-              <div class="basket__product--wrap">
-                <p class="basket__product--text">Category:<span class="basket__product--bold">${product.category}</span></p>
-              <p class="basket__product--text">Size:<span class="basket__product--bold">${product.size}</span></p>
-              </div>
-              <p class="basket__product--price">$${product.price}</p>
-            </div>
-            <button class="basket__product--close">
-            <svg
-            class="basket__product--icon"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M25 9.093l-2.093-2.093-6.907 6.907-6.907-6.907-2.093 2.093 6.907 6.907-6.907 6.907 2.093 2.093 6.907-6.907 6.907 6.907 2.093-2.093-6.907-6.907 6.907-6.907z"
-            ></path>
-          </svg>
-          </button>
-           <div class="basket__product--controls">
-              <button class="basket__product--btn basket__product--subtract">
-                <div class="basket__product--minus"></div>
-              </button>
-              <p class="basket__product--number">1</p>
-              <button class="basket__product--btn basket__product--add">
-                <div class="basket__product--plus"></div>
-                <div class="basket__product--plus"></div>
-              </button>
-            </div>
-          </li>
-        </ul>
+        <ul class="basket__list"></ul>
       </div>
       <div class="basket__order">
         <h5 class="basket__subtitle">Your Order</h5>
@@ -69,16 +36,16 @@
           <p class="basket__text">Total</p>
           <div class="basket__sum">
             <p class="basket__sum--text">Sum:</p>
-            <p class="basket__sum--number">$12,94</p>
+            <p class="basket__sum--number">$<span class="basket__number">0</span></p>
           </div>
         </div>
         <form class="basket__form">
-          <p class="basket__input--text">Address:</p>
+          <p class="basket__input--text">Email:</p>
           <p class="basket__input--text">Phone:</p>
           <input
             type="text"
             class="basket__input"
-            placeholder="Enter your address"
+            placeholder="Enter your email"
             required
           />
           <input
