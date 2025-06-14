@@ -1,7 +1,7 @@
 footer {
   background-color: #6a8e48;
   color: white;
-  padding: 40px 20px 20px;
+  padding: 40px 0px 20px;
   padding-left: 0;
   margin-top: 40px;
 
@@ -12,7 +12,7 @@ footer {
 
   .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
@@ -22,6 +22,8 @@ footer {
     .footer-right {
       flex: 1;
       padding: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
       min-width: 200px;
 
       h2 {
@@ -33,18 +35,18 @@ footer {
   .footer-title {
     font-size: 18px;
     font-weight: 900;
-    color: white;
+    fill: white;
   }
 
   .footer-subtitle {
     font-weight: 500;
     font-size: 24px;
-    width: 335px;
+    width: 315px;
   }
 
   .footer-text {
     margin-top: 14px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     color: #e8e8e2b2;
     
     font-weight: 400;
@@ -66,7 +68,9 @@ footer {
     border-radius: 50%;
     background-color: white;
   }
-
+.right-center{
+  width: 315px;
+}
   .socials {
     margin-top: 20px;
     margin-bottom: 40px;
@@ -115,7 +119,7 @@ footer {
   .subscribe {
     margin-top: 20px;
     margin-bottom: 80px;
-    width: 335px;
+    width: 315px;
     height: 98px;
     display: flex;
     flex-direction: column;
@@ -185,9 +189,15 @@ footer {
   }
 
   footer .footer-content {
+    justify-content: space-between;
     flex-wrap: nowrap;
   }
-
+.footer-main-content{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
   .footer-title-div {
     width: 218px;
     height: 32px;
@@ -198,15 +208,21 @@ footer {
   footer .footer-content .footer-right {
     padding: 32px 32px 20px;
   }
-
+footer .footer-content .footer-left{
+  padding-right: 0;
+  flex: 0;
+  padding-left: 0;
+}
   footer .footer-content .footer-center {
     padding-left: 0;
     padding-bottom: 0;
-    margin-left: 106px;
+    margin-left: 78px;
   }
-
+footer .right-center{
+width: 429px;
+}
   footer .footer-content .footer-right {
-    margin-left: 106px;
+    margin-left: 78px;
     padding-left: 0;
     padding-top: 0;
   }
@@ -221,6 +237,7 @@ footer {
   }
 
   footer .footer-text {
+    width: 429px;
     margin-top: 20px;
     margin-bottom: 64px;
     font-size: 18px;
@@ -260,6 +277,7 @@ footer {
     padding-left: 9px;
   }
   footer .subscribe {
+    width: 335px;
     margin-bottom: 0;
     height: 116px;
     row-gap: 20px;
@@ -303,16 +321,25 @@ padding: 0px 0px 128px;
 padding-top: 40px;
 width: 1240px;
 column-gap: 148px;
+max-width: 100%;
   }
+.footer-main-content{
+  column-gap: 148px;
+}
+
   footer .footer-content .footer-left,
   footer .footer-content .footer-center,
   footer .footer-content .footer-right {
+  
     padding: 0;
     margin: 0;
   }
-.right-center{
+
+
+footer .right-center{
   display: flex;
   column-gap: 148px;
+  width: 894px;
 }
 
 
