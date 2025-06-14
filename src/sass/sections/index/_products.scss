@@ -30,6 +30,46 @@
     &__list {
       display: flex;
       justify-content: center;
+      width: 100vw;
+      margin-left: 0;
+      gap: 16px;
+    }
+
+    &__item {
+      width: 95vw;
+      min-width: 0;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 12px;
+    }
+
+    &__container_img {
+      width: 90vw;
+      max-width: 240px;
+      min-width: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px 20px;
+      width: 100%;
+      margin-left: 0;
+      justify-content: center;
+    }
+    &__item {
+      width: 380px;
+      height: 380px;
+      padding: 32px;
+    }
+    &__container_img {
+      width: 280px;
+      height: 220px;
+    }
+    &__title {
+      font-size: 26px;
     }
   }
 
