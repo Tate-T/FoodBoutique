@@ -14,8 +14,8 @@ async function loadProducts() {
 
     const li = document.createElement("li");
     li.className = "basket__product";
-    li.dataset.price = product.price; 
-    li.dataset.id = product._id; 
+    li.dataset.price = product.price;
+    li.dataset.id = product._id;
     li.innerHTML = `
       <div class="basket__product--square">
       <img src="${product.img}" alt="${product.name}" class="basket__product--image">
@@ -46,39 +46,20 @@ async function loadProducts() {
     `;
 
     basketList.appendChild(li);
-    document.querySelector(".basket__number").textContent = `${
+    document.querySelector(".basket__number").textContent = `${(
       parseFloat(
         document.querySelector(".basket__number").textContent.replace(",", ".")
       ) + product.price
-    }`.replace(".", ",");
+    ).toFixed(2)}`.replace(".", ",");
   }
 }
 
 if (products.length === 0) {
   document.querySelector(".basket__wraper").innerHTML =
-    '<img src="../images/desktop/empty-basket.png" alt="">';
+    '<img src="./images/desktop/hero__bg.jpg" alt="">';
 } else {
   loadProducts();
 }
-
-// console.log(parseFloat(document.querySelector(".basket__number").textContent.replace(',', '.')));
-
-// getUserAPI(1).then((user) => {
-//   cart.innerHTML = createCartList(user.cart);
-// });
-
-// document.querySelector(".basket__list").addEventListener("click", (e) => {
-//   if (e.target.classList.contains("basket__product--subtract") || e.target.parentNode.classList.contains("basket__product--subtract")) {
-//     const newNum = Number(e.target.closest(".basket__product--subtract").nextElementSibling.textContent) - 1;
-//     if (newNum < 0) {
-//       return
-//     }
-//     e.target.closest(".basket__product--subtract").nextElementSibling.textContent = newNum;
-//   } else if (e.target.classList.contains("basket__product--add") || e.target.parentNode.classList.contains("basket__product--add")) {
-//     const newNum = Number(e.target.closest(".basket__product--add").previousElementSibling.textContent) + 1;
-//     e.target.closest(".basket__product--add").previousElementSibling.textContent = newNum;
-//   }
-// });
 
 let intervalId = null;
 
@@ -92,25 +73,20 @@ function changeQuantity(element, direction) {
 
   if (newNum < 0) return;
 
-  // Update quantity number
   numberEl.textContent = newNum;
 
-  // Get price of this product
   const li = element.closest(".basket__product");
   const price = parseFloat(li.dataset.price);
 
-  // Get current total
   const basketNumberEl = document.querySelector(".basket__number");
   let currentTotal = parseFloat(basketNumberEl.textContent.replace(",", "."));
 
-  // Adjust total
   if (direction === "add") {
     currentTotal += price;
   } else {
     currentTotal -= price;
   }
 
-  // Update total (format with comma)
   basketNumberEl.textContent = currentTotal.toFixed(2).replace(".", ",");
 }
 
@@ -137,3 +113,44 @@ basketList.addEventListener("mousedown", (e) => {
 
 document.addEventListener("mouseup", stopHolding);
 basketList.addEventListener("mouseleave", stopHolding);
+
+if (basketList) {
+  basketList.addEventListener("click", (e) => {
+  const closeBtn = e.target.closest(".basket__product--close");
+  if (closeBtn) {
+    const li = closeBtn.closest(".basket__product");
+    const id = li.dataset.id;
+
+    const quantityEl = li.querySelector(".basket__product--number");
+    const quantity = parseInt(quantityEl.textContent) || 1;
+
+    li.remove();
+
+    let products = JSON.parse(localStorage.getItem("products")) ?? [];
+    products = products.filter((productId) => productId !== id);
+    localStorage.setItem("products", JSON.stringify(products));
+
+    const price = parseFloat(li.dataset.price);
+    const basketNumberEl = document.querySelector(".basket__number");
+    let currentTotal = parseFloat(
+      basketNumberEl.textContent.replace(",", ".")
+    );
+
+    currentTotal -= price * quantity;
+    if (currentTotal < 0) currentTotal = 0;
+
+    basketNumberEl.textContent = currentTotal.toFixed(2).replace(".", ",");
+  }
+});
+}
+
+const deleteAllBtn = document.querySelector(".basket__btn");
+const basketNumberEl = document.querySelector(".basket__number");
+
+deleteAllBtn.addEventListener("click", () => {
+  localStorage.removeItem("products");
+
+  basketList.innerHTML = "";
+
+  basketNumberEl.textContent = "0,00";
+});
