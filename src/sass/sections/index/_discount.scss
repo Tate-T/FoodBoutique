@@ -129,4 +129,26 @@
       display: block;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .discount__item {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin: 0 auto 20px auto;
+      padding: 10px;
+    }
+    .discount__svg-discount {
+      left: auto;
+      right: 8px;
+      top: 3px;
+      width: 44px;
+      height: 44px;
+    }
+    .discount__box-img {
+      width: 100%;
+      max-width: 220px;
+      min-width: 0;
+    }
+  }
 }
