@@ -38,5 +38,12 @@ document.addEventListener("click", function(e) {
     if (li && li.id) {
       openProductModal(li.id);
     }
+  } else if (e.target.classList.contains("products__svg_btn") || e.target.parentNode.classList.contains("products__svg_btn") || e.target.parentNode.parentNode.classList.contains("products__svg_btn")) {
+  let products = JSON.parse(localStorage.getItem("products")) ?? [];
+    let id = e.target.closest("li").id;
+    if (!products.includes(id)) {
+      products.push(id);
+      localStorage.setItem("products", JSON.stringify(products));
+    }
   }
 });
