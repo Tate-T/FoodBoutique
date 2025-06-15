@@ -4,13 +4,17 @@
 window.greetFooterSubscribe = function() {
   const emailInput = document.getElementById('footer-input');
   const email = emailInput ? emailInput.value.trim() : '';
-  if (email) {
-    checkEmailExists(email);
-    openFooterModal();
+  if (!email) {
+    emailInput.classList.add("error");
+    emailInput.value = "";
+    emailInput.placeholder = "Please enter your email";
+    return; 
   } else {
-    checkEmailExists(email);
-     openFooterModal();
+    emailInput.classList.remove("error");
+    emailInput.placeholder = "Email";
   }
+  checkEmailExists(email);
+  openFooterModal();
 };
 
 
