@@ -1,10 +1,13 @@
 footer {
-  background-color: #6a8e48;
+  background-color: #6D8434;
   color: white;
   padding: 40px 0px 20px;
   padding-left: 0;
   margin-top: 40px;
 
+  .footer-container{
+    width: 101vw;
+  }
   .footer-title-div {
     @include flexbox(center, start);
     column-gap: 8px;
@@ -12,7 +15,9 @@ footer {
 
   .footer-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
@@ -22,8 +27,8 @@ footer {
     .footer-right {
       flex: 1;
       padding: 20px;
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
       min-width: 200px;
 
       h2 {
@@ -95,6 +100,9 @@ footer {
       padding-right: 16px;
       padding-left: 16px;
     }
+    .footer-fb-logo:hover {
+      background-color: #E8E8E233 ;
+    }
     .footer-Inst-logo {
       fill: #e8e8e2;
       border: 1px solid #e8e8e24d;
@@ -102,6 +110,9 @@ footer {
       width: 40px;
       height: 40px;
       padding: 10px;
+    }
+        .footer-Inst-logo:hover {
+      background-color: #E8E8E233 ;
     }
     .footer-YT-logo {
       fill: #e8e8e2;
@@ -113,6 +124,9 @@ footer {
       padding-bottom: 12px;
       padding-right: 9px;
       padding-left: 9px;
+    }
+    .footer-YT-logo:hover {
+      background-color: #E8E8E233 ;
     }
   }
 
@@ -131,11 +145,21 @@ footer {
       border-radius: 20px;
       width: 100%;
       margin-bottom: 10px;
-      background-color: $highlight-color;
+      background-color: #6D8434;
 
       &::placeholder {
-        color: $bg-color;
+        color: #E8E8E299 ;
       }
+      &.error::placeholder {
+        font-style: italic;
+        font-weight: bold;
+  color: #780606;
+}
+&:focus, #footer-input:not(:placeholder-shown) {
+  background: #f3f3ed 90%;
+  color: #000;
+  font-weight: bold;
+}
     }
 
     button {
@@ -147,6 +171,9 @@ footer {
       color: black;
       font-weight: bold;
       cursor: pointer;
+    }
+    button:hover {
+      color: #6D8434;
     }
   }
 
@@ -161,7 +188,7 @@ footer {
     font-size: 14px;
     color: #ddd;
     width: 202px;
-    margin-left: 20px;
+    margin-right: 110px;
   }
 
   input,
@@ -295,7 +322,7 @@ width: 429px;
 
   footer .footer-bottom{
     justify-content: center;
-    margin-left: 0;
+    margin-right: 0;
     width: 100vw;
     display: flex;
     column-gap: 297px;
@@ -317,7 +344,7 @@ footer {
 }
   footer .footer-content {
 margin: 0;
-padding: 0px 0px 128px;
+padding: 0px 0px 0px;
 padding-top: 40px;
 width: 1240px;
 column-gap: 148px;
@@ -363,7 +390,7 @@ footer .right-center{
   footer .footer-bottom{
 
     column-gap: 883px;
-    margin-top: 0;
+    margin-top: 128px;
   }
   footer .footer-botom-item{
   
