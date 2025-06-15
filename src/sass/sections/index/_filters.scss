@@ -87,6 +87,8 @@
     align-items: center;
     color: #010101;
     border: 1px solid rgba(1, 1, 1, 0.3);
+    cursor: pointer;
+    transition: border-color 0.2s;
 
     &:hover,
     &:focus {
@@ -107,6 +109,7 @@
   &__icon {
     stroke: #010101;
     fill: none;
+    cursor: pointer;
   }
 
   &__title {
@@ -136,6 +139,7 @@
     position: absolute;
     padding: 0;
     top: 50%;
+    cursor: pointer;
   }
 
   &__input {
@@ -148,6 +152,7 @@
     width: 100%;
     font-size: 14px;
     line-height: 1.29;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -156,7 +161,6 @@
 
     &::placeholder {
       color: #010101;
-
       font-size: 14px;
       font-weight: 400;
       line-height: 1.29;
