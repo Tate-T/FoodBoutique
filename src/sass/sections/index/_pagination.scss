@@ -49,6 +49,8 @@
     border-radius: 60px;
     line-height: 0;
     background: #fafafa;
+    transition: background-color 0.45s, color 0.45s, stroke 0.45s;
+    cursor: pointer;
 
     &:hover {
       background-color: #6d8434;
@@ -57,6 +59,7 @@
 
   &__box:hover &__svg {
     stroke: #fafafa;
+    transition: stroke 0.45s;
   }
 
   &__item {
@@ -65,6 +68,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
 
   &__btn {
@@ -78,6 +82,8 @@
     justify-content: center;
     flex-direction: column;
     color: #a3a3a3;
+    transition: background-color 0.45s, color 0.45s;
+    cursor: pointer;
 
     &:hover {
       background-color: #fafafa;
