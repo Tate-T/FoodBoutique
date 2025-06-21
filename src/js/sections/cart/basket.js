@@ -140,6 +140,7 @@ if (basketList) {
     if (currentTotal < 0) currentTotal = 0;
 
     basketNumberEl.textContent = currentTotal.toFixed(2).replace(".", ",");
+    location.reload();
   }
 });
 }

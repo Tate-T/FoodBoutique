@@ -1,9 +1,9 @@
 .scrollToTop {
   position: fixed;
   bottom: 20px;
-  right: calc(50% - 650px);
-  width: 65px;
-  height: 65px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
   background-color: $highlight-color;
   border-radius: 50%;
   z-index: 3;
@@ -11,6 +11,17 @@
   gap: 10px;
   transition: background, box-shadow, $st-animation;
     box-shadow: 0 0 15px 15px rgba($bg-color, 0.5);
+
+    @media screen and (min-width: 768px) {
+  bottom: 40px;
+  width: 65px;
+  height: 65px;
+  }
+
+  @media screen and (min-width: 1304px) {
+  right: calc(50% - 700px);
+  bottom: 55px;
+  }
 
   &:hover {
     background-color: $bg-color;

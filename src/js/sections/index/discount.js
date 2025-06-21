@@ -2,7 +2,7 @@ import { getDiscountProducts } from "../../markup/getDiscountProducts";
 
 getDiscountProducts().then((items) => {
   const container = document.querySelector(".discount__list");
-  const cartItems = JSON.parse(localStorage.getItem("cart") || "[]").map((el) => el.id);
+  const cartItems = JSON.parse(localStorage.getItem("products") || "[]").map((el) => el.id);
   const renderList = items.slice(0, 2).map((product) => {
     const inCart = cartItems.includes(product._id);
     return `
@@ -23,7 +23,8 @@ getDiscountProducts().then((items) => {
             <p class="discount__price">$${product.price}</p>
             <button data-productadd="true" class="discount__svg-container">
               ${
-                inCart
+                JSON.parse(localStorage.getItem("products") || "[]")
+                  .includes(product._id)
                   ? "✓"
                   : `<svg class="discount__basket">
                       <use href="#cart"></use>

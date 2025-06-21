@@ -38,8 +38,7 @@ getFilteredProducts("", "", 1, "").then((data) => {
             <p class="products__price">$${price}</p>
             <button data-productadd="true" class="products__svg_btn">
               ${
-                JSON.parse(localStorage.getItem("cart") || "[]")
-                  .map((item) => item.id)
+                JSON.parse(localStorage.getItem("products") || "[]")
                   .includes(_id)
                   ? "✓"
                   : `<svg class="products__basket">
