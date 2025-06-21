@@ -18,6 +18,8 @@ body {
   font-family: 'PP Neue Montreal';
   background-color:#e8e8e2;
   margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .is-hidden {

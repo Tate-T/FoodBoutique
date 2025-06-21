@@ -1,7 +1,7 @@
 import { getPopularProducts } from "../../markup/getPopularProducts";
 
 getPopularProducts().then((products) => {
-  const cart = JSON.parse(localStorage.getItem("cart") || "[]"); 
+  const cart = JSON.parse(localStorage.getItem("products") || "[]"); 
 
   document.querySelector("#popular__list").innerHTML = products
     .map(
@@ -26,13 +26,13 @@ getPopularProducts().then((products) => {
           </div>
           <button data-productadd='true' class="popular__cart">
             ${
-              cart.map((item) => item.id).includes(_id)
-                ? "✓"
-                : `
-            <svg class="popular__icon" width="12" height="12">
+                JSON.parse(localStorage.getItem("products") || "[]")
+                  .includes(_id)
+                  ? "✓"
+                  : `<svg class="popular__icon" width="12" height="12">
               <use href="#cart"></use>
             </svg>`
-            }
+              }
           </button>
         </li>`
     )
