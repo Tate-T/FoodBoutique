@@ -77,3 +77,19 @@ html {
   }
 }
 
+
+.filter, .filter *,
+select, .custom-select, .dropdown, .dropdown *,
+.products__basket, .discount__basket, .cart-icon, .basket-icon {
+  cursor: pointer;
+}
+
+.filter:hover,
+select:hover,
+.custom-select:hover,
+.dropdown:hover,
+.products__basket:hover,
+.discount__basket:hover {
+  cursor: pointer;
+}
+
